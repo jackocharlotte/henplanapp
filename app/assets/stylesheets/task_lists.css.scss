@@ -1,3 +1,35 @@
 // Place all the styles related to the task_lists controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.tasks {
+  margin: 1em 0 1em 0;
+  .padded {
+    background:#fff;
+    padding:1em 1.5em;
+    border: 1px solid #eee;
+    border-radius: 4px;
+  }
+  h2 {
+    margin:0 0px 10px 0;
+  }
+  ul li {
+    list-style: none;
+    margin-right: 20px;
+    display: inline-block;
+  }
+  p.created {font-size:0.95em;}
+}
+
+.new {
+  padding-top:40px;
+  @media (max-width: 767px) {
+        padding-top:10px;
+  }
+  a {
+    float:right;
+    @media (max-width: 767px) {
+        float:left;
+    }
+  }
+}

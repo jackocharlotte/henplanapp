@@ -14,6 +14,7 @@
   <tbody>
     <% @task_lists.each do |task_list| %>
       <tr id="<%= dom_id(task_list) %>">
+        <td><%= link_to 'List Items', task_list_task_items_path(task_list) %></td>
         <td><%= task_list.title %></td>
         <td><%= task_list.description %></td>
         <td><%= link_to 'Show', task_list %></td>

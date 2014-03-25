@@ -1,5 +1,8 @@
 HenplanppV1::Application.routes.draw do
-  resources :task_lists
+
+  resources :task_lists do
+    resources :task_items 
+  end
 
   resources :homes
 
