@@ -22,5 +22,4 @@ def visit_task_list(list)
     expect(page.all("ul.task_items li").size).to eq(0)
   end
 
-  
 end
