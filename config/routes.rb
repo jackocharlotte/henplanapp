@@ -1,4 +1,6 @@
 HenplanppV1::Application.routes.draw do
+  resources :task_lists
+
   resources :homes
 
    root 'homes#index'
