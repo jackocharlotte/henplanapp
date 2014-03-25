@@ -1,0 +1,54 @@
+<div class="container">
+	<div class="row">
+	<!--<div class="col-md-12">
+		<div class="instructions">
+			<p>Some welcome instructions etc</p>
+		</div>
+	</div>-->
+	  <div class="col-xs-12 col-sm-7 col-md-7">
+	  	<h2>Dashboard</h2>
+			<ul class="dashboard">
+				<li>
+					<%= link_to task_lists_path, class: 'icon-font' do %>
+					&#10003;
+					<span>Tasks</span>
+					<% end %>
+				</li>
+				<li>
+					<%= link_to task_lists_path, class: 'icon-font' do %>
+					&#128101;
+					<span>Attendees</span>
+					<% end %>
+				</li>
+				<li>
+					<%= link_to task_lists_path, class: 'icon-font' do %>
+					&#10062;
+					<span>Budgets</span>
+					<% end %>
+				</li>
+				<li>
+					<%= link_to task_lists_path, class: 'icon-font' do %>
+					&#9993;
+					<span>Discussions</span>
+					<% end %>
+				</li>
+				<li>
+					<%= link_to task_lists_path, class: 'icon-font' do %>
+					&#128213;
+					<span>Notes</span>
+					<% end %>
+				</li>
+				<li>
+					<%= link_to task_lists_path, class: 'icon-font' do %>
+					&#59190;
+					<span>Extras</span>
+					<% end %>
+				</li>
+			</ul>
+	  </div>
+	  <div class="col-xs-12 col-sm-5 col-md-5">
+	  	<h3>Event details</h3>
+		<h4>Recent activity</h4>
+	  </div>
+	</div>
+</div>
