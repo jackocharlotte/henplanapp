@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140325130846) do
+ActiveRecord::Schema.define(version: 20140328125117) do
 
   create_table "homes", force: true do |t|
     t.datetime "created_at"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20140325130846) do
     t.string   "content"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "completed_at"
   end
 
   add_index "task_items", ["task_list_id"], name: "index_task_items_on_task_list_id"

@@ -1,7 +1,11 @@
 HenplanppV1::Application.routes.draw do
 
   resources :task_lists do
-    resources :task_items 
+    resources :task_items do
+      member do
+        patch :complete
+      end
+    end
   end
 
   resources :homes
