@@ -25,7 +25,13 @@
           <tbody>
           <% @task_list.task_items.each do |task_item| %>
           <tr id="<%= dom_id(task_item) %>">
-            <td> <%= link_to "Mark Complete", complete_task_list_task_item_path(task_item), method: :patch %></td>
+            <td>
+              <% if task_item.completed? %>
+                <%= task_item.completed_at %>
+              <% else %>
+                <%= link_to "Mark Complete", complete_task_list_task_item_path(task_item), method: :patch %>
+              <% end %>
+            </td>
             <td><%= task_item.content %></td>
             <td>
               <%= link_to "Edit", edit_task_list_task_item_path(task_item) %>
