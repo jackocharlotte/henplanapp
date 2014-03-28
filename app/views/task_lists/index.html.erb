@@ -12,40 +12,36 @@
             </div>
           </div>
 
-            <% @task_lists.in_groups_of(@task_lists.size/1.floor).each do |task_list| %>
-                
-                  <% task_list.each do |task_list| %>
-                      <div class="tasks col-md-6" id="<%= dom_id(task_list) %>">
-                          <div class="padded">
-                             <h2><%= task_list.title %></h2>
-                             
-                             <%if task_list.description.present? %>
-                               <p>Description: <%= task_list.description %></p>
-                             <%end%>
+              <% @task_lists.each do |task_list| %>
+                  <div class="tasks col-md-6" id="<%= dom_id(task_list) %>">
+                      <div class="padded">
+                         <h2><%= task_list.title %></h2>
+                         
+                         <%if task_list.description.present? %>
+                           <p>Description: <%= task_list.description %></p>
+                         <%end%>
 
-                             <ul class="functions">  
-                                <li>
-                                  <%= link_to edit_task_list_path(task_list), class: 'icon-font' do %>
-                                  &#9998;
-                                  <span>Edit</span>
-                                  <% end %>
-                                </li>
-                                <li>
-                                  <%= link_to task_list, method: :delete, data: { confirm: 'Are you sure?' }, class: 'icon-font' do %>
-                                  &#59177;
-                                  <span>Delete</span>
-                                  <% end %>
-                                </li>
-                                <li>
-                                  <td><%= link_to 'List Items', task_list_task_items_path(task_list) %></td>
-                                </li>
-                              </ul>
-                          </div>
+                         <ul class="functions">  
+                            <li>
+                              <%= link_to edit_task_list_path(task_list), class: 'icon-font' do %>
+                              &#9998;
+                              <span>Edit</span>
+                              <% end %>
+                            </li>
+                            <li>
+                              <%= link_to task_list, method: :delete, data: { confirm: 'Are you sure?' }, class: 'icon-font' do %>
+                              &#59177;
+                              <span>Delete</span>
+                              <% end %>
+                            </li>
+                            <li>
+                              <td><%= link_to 'List Items', task_list_task_items_path(task_list) %></td>
+                            </li>
+                          </ul>
                       </div>
-                  <% end %>
+                  </div>
+              <% end %>
               
-            <% end %>
-            
         </article>
     </div>
 </div>
