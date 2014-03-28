@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>HenplanppV1</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <title>Henplanapp</title>
+  <%= stylesheet_link_tag  "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	<script type="text/javascript" src="//use.typekit.net/bqh8lwi.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<link rel="stylesheet" href="http://i.icomoon.io/public/temp/a5b1f4052a/UntitledProject1/style.css">
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+	<% if user_signed_in? %>
+		<%= render 'layouts/loggedin' %>
+	<% else %>
+		<%= render 'layouts/not_loggedin' %>
+	<% end %>
 
 <div class="flash-container"></div>
 
@@ -17,6 +26,7 @@
 <% end %>	
 
 <%= yield %>
+
 
 </body>
 </html>

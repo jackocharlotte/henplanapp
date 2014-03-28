@@ -1,5 +1,7 @@
 HenplanppV1::Application.routes.draw do
 
+  devise_for :users
+  get "home/index"
   resources :task_lists do
     resources :task_items do
       member do
@@ -8,9 +10,16 @@ HenplanppV1::Application.routes.draw do
     end
   end
 
+  devise_scope :user do
+    get 'register', :to => 'devise/registrations#new', as: :register
+    get 'login', to: 'devise/sessions#new', as: :login
+    get 'logout', to: 'devise/sessions#destroy', as: :logout
+    get 'edit', to: 'devise/registrations#edit', as: :edit
+  end
+
   resources :homes
 
-   root 'homes#index'
+  root 'homes#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
