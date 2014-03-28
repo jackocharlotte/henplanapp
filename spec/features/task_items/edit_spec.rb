@@ -4,12 +4,6 @@ describe "Editing task items" do
   let!(:task_list) { TaskList.create(title: "Attendees", description: "Gather list") }
   let!(:task_item) { task_list.task_items.create(content: "Alice") }
 
-  def visit_task_list(list)
-  visit "/task_lists"
-    within "#task_list_#{list.id}" do
-      click_link "List Items"
-    end
-  end
 
   it "is successful with valid content" do
     visit_task_list(task_list)
