@@ -1,0 +1,4 @@
+<h1><%= @task_list.title %> - Editing Task List Item</h1>
+<%= form_for [@task_list, @task_item] do |form| %>
+  <%= render partial: form %>
+<% end %>

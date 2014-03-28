@@ -21,4 +21,15 @@ it "is successful with valid content" do
   	end 
   end
 
+  it "displays an error with content less than 2 characters long" do
+    visit_task_list(task_list)
+    click_link "New Task Item"
+    fill_in "Content", with: "1"
+    click_button "Save"
+    within("div.flash") do
+      expect(page).to have_content("There was a problem adding that task list item.")
+    end
+    expect(page).to have_content("Content is too short")
+  end
+
 end
