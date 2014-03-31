@@ -1,4 +1,11 @@
+<%unless current_user.blank? -%>
 
+	<%= render 'dashboard' %>
+
+<% else %>
 
 	<%= render 'home' %>
+
+<% end %>
+
 
