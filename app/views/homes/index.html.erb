@@ -1,4 +1,4 @@
-<%unless current_user.blank? -%>
+<% if user_signed_in? %>
 
 	<%= render 'dashboard' %>
 

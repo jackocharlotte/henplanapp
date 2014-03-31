@@ -9,4 +9,5 @@ class ApplicationController < ActionController::Base
       u.permit(:username, :gender, :email, :password, :password_confirmation)
     end
   end
+  before_filter :authenticate_user!
 end
