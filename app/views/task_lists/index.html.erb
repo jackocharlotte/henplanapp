@@ -17,11 +17,12 @@
                       <div class="padded">
                          <h2><%= task_list.title %></h2>
                          
-                         <%if task_list.description.present? %>
-                           <p>Description: <%= task_list.description %></p>
-                         <%end%>
+                         <p class="created"> Assigned to: <%= User.find(task_list.user_id).username %> | Created: <%= task_list.created_at.strftime("%d %b. %Y") %></p>
+                             <%if task_list.description.present? %>
+                               <p>Description: <%= task_list.description %></p>
+                             <%end%>
 
-                         <ul class="functions">  
+                         <ul>  
                             <li>
                               <%= link_to edit_task_list_path(task_list), class: 'icon-font' do %>
                               &#9998;

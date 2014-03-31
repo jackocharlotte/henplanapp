@@ -23,6 +23,12 @@ body{
   -webkit-font-smoothing: antialiased;
 }
 
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  line-height: 18px;
+}
+
+
 a.icon-font {
 font-family: 'Entypo';
 display: block;
@@ -49,7 +55,6 @@ header{
     float: left;
     color:#fff;
     .count {
-      /*color:$pink;*/
       font-weight: 700;
     }
   }
@@ -139,17 +144,7 @@ input[type="submit"], .login_btn {
 }
 
 
-
-
-
-
-
 /*Scaffold*/
-p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
-}
 
 pre {
   background-color: #eee;

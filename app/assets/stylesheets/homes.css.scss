@@ -4,7 +4,7 @@
 
 $pink: #fd75a2;
 $pink-dark: #a63c5f;
-$very-dark:#3a2d31;
+$very-dark: #3a2d31;
 $purple: #7f5060;
 
 /*DASHBOARD*/
@@ -24,14 +24,14 @@ ul.dashboard {
     a {
       text-decoration: none;
       color:$pink-dark;
-      padding:35px 0 25px 0;
+      padding:30px 0 25px 0;
       &:hover {color:#fff;}
     }
     span {
       display: block;
       color:$pink-dark;
       font-size:20px;
-      padding:5px;
+      margin-top:15px;
     }
     &:hover {
     background-color: $very-dark;
