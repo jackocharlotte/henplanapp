@@ -4,10 +4,11 @@
       <div class="col-md-12">
         <div class="row">
           <div class="col-xs-12 col-sm-6 col-md-6">
-           <h1><span class="icon-font">&#10003;</span>Attendee list</h1>
+           <h1><span class="icon-font">&#128101;</span>Attendee list</h1>
           </div> 
           <div class="col-xs-12 col-sm-6 col-md-6 new">
-           <%= link_to 'New Attendee', new_attendee_path %>
+           <%= link_to new_attendee_path, class: 'icon-font' do %> &#8862; <span>New attendee</span>
+                   <% end %>  
           </div> 
           <div class="col-xs-12 col-sm-12 col-md-12">
              
