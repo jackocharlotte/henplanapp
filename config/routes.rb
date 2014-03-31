@@ -1,5 +1,7 @@
 HenplanppV1::Application.routes.draw do
 
+  resources :attendees
+
   devise_for :users
   get "home/index"
   resources :task_lists do
