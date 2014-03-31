@@ -21,7 +21,6 @@ module HenplanppV1
     config.i18n.default_locale = :en
     I18n.enforce_available_locales = false
     config.assets.initialize_on_precompile = false
-    config.assets.paths << Rails.root.join("app", "assets", "stylesheets", "webfonts")
-    config.assets.precompile += %w( .svg .eot .woff .ttf )
+    config.assets.paths << "#{Rails.root}/app/assets/stylesheets/webfonts"
   end
 end
