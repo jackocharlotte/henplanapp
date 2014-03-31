@@ -1,4 +1,8 @@
-/*Layout*/
+@font-face {
+  font-family: 'Entypo'; font-style: 'normal'; font-weight: 'normal'; src: url('webfonts/entypo.eot'); src: url('webfonts/entypo.eot?#iefix') format('eot'), 
+  url('webfonts/entypo.woff') format('woff'),  url('webfonts/entypo.ttf') format('truetype'), url('webfonts/entypo.svg#entypo') format('svg');
+}
+
 $pink: #fd75a2;
 $pink-dark: #a63c5f;
 $very-dark:#3a2d31;
@@ -77,7 +81,7 @@ nav{
     a {
       text-decoration: none;
       color:#fff;
-      padding: 6px 10px;
+      padding: 6px;
       display:block;
     }
     &:hover {
