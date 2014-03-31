@@ -1,14 +1,28 @@
-<p id="notice"><%= notice %></p>
+<h1><%= @task_list.title %></h1>
 
-<p>
-  <strong>Title:</strong>
-  <%= @task_list.title %>
-</p>
+<h2><%= @task_list.description %></h2>
 
-<p>
-  <strong>Description:</strong>
-  <%= @task_list.description %>
-</p>
+<% if @task_list.has_incomplete_items? %>
+<h3>Incomplete Items:</h3>
+
+<ul>
+  <% @task_list.task_items.incomplete.each do |task_item| %>
+  <li><%= task_item.content %></li>
+  <% end %>
+</ul>
+<% end %>
+
+<% if @task_list.has_completed_items? %>
+<h3>Complete Items:</h3>
+
+<ul>
+  <% @task_list.task_items.complete.each do |task_item| %>
+  <li><%= task_item.content %></li>
+  <% end %>
+</ul>
+<% end %>
 
 <%= link_to 'Edit', edit_task_list_path(@task_list) %> |
 <%= link_to 'Back', task_lists_path %>
+<p>Created on: <%= @task_list.created_at.strftime("%d %b. %Y") %></p>
+<p>Assigned to: <%= @task_list.user.username %></p>
