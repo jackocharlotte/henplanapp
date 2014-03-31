@@ -19,7 +19,7 @@
                       <div class="padded">
                          <h2><%= task_list.title %></h2>
                          
-                         <p class="created"> | Created: <%= task_list.created_at.strftime("%d %b. %Y") %></p>
+                         <p class="created">Assigned to: <%= User.find(task_list.user_id).username %> | Created: <%= task_list.created_at.strftime("%d %b. %Y") %></p>
                              <%if task_list.description.present? %>
                                <p>Description: <%= task_list.description %></p>
                              <%end%>
@@ -45,7 +45,10 @@
                   </div>
                 <% end %>
               <% else %>
+               <div class="no-items">
                   You have no task lists. Create a <%= link_to 'new one.',new_task_list_path %>
+                </div>
+              </div>
             <% end %>
               
         </article>
