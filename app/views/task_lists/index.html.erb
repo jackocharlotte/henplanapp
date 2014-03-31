@@ -12,7 +12,7 @@
             </div>
           </div>
 
-            <% if @task_list.present? %>
+            <% if @task_lists.present? %>
               <% @task_lists.each do |task_list| %>
               
                   <div class="tasks col-md-6" id="<%= dom_id(task_list) %>">
