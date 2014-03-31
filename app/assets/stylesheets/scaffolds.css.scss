@@ -1,11 +1,142 @@
-body {
-  background-color: #fff;
-  color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+/*Layout*/
+$pink: #fd75a2;
+$pink-dark: #a63c5f;
+$very-dark:#3a2d31;
+$purple: #7f5060;
+
+body{ 
+  font: {
+    family: 'Museo Sans', Helvetica, Arial, sans-serif;
+    weight: 500;
+    size:16px;
+  }
+  color: #3a2d31;  
+  background:#fbf6f6; /*f0e5e8*/
+  -webkit-font-smoothing: antialiased;
 }
 
+a.icon-font {
+font-family: 'Entypo';
+display: block;
+span {font-family: 'Museo Sans', Helvetica, Arial, sans-serif;}
+}
+
+span.icon-font {
+  font-family: 'Entypo';
+  margin-right:20px;
+}
+
+ul {padding:0;}
+
+/* HEADER */
+header{
+  padding:6px 0;
+  /*border-top: 2px solid $pink;*/
+  background: $pink-dark;
+  /*background-color: #df4b7c;*/
+  margin-bottom: 30px;
+  p {
+    margin-top:15px;
+    display: block;
+    float: left;
+    color:#fff;
+    .count {
+      /*color:$pink;*/
+      font-weight: 700;
+    }
+  }
+  h1 {
+    margin-bottom: 0;
+    line-height: 0;
+  }
+}
+
+/* NAVIGATION */
+nav{
+  margin-top: 7px;
+  li {
+    display:block;
+    float:right;
+    margin-left:5px;
+  }
+  a.login_btn { 
+    color:#fff;
+    float:right;
+    text-align: center; 
+    background-color:$pink;
+  }
+  ul.loggedin {
+    margin-top:0px;
+    float: right;
+    padding:0;
+  }
+  .btn-primary {
+    background-color:$pink;
+    border:none;
+    display:block;
+    a {
+      text-decoration: none;
+      color:#fff;
+      padding: 6px 10px;
+      display:block;
+    }
+    &:hover {
+      background-color:$very-dark;
+    }
+    a:hover {
+    color:#fff;
+    }
+  }
+}
+
+.logo {
+  background: url(image_path('nameandlogo.png')) no-repeat; 
+  text-indent: -99999px;
+  display:block;
+  margin-left:-10px;
+  float:left;
+  a {
+    width: 150px;
+    height: 40px;
+    display: block;
+    margin-top: -10px;
+  }
+}
+
+
+/*BUTTONS*/
+input[type="submit"], .login_btn {
+  background-color: #cc6571;
+  border:none;
+  color:#fff;
+  font-weight: 500;
+  padding:5px 15px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 480px) {
+  header {
+    font-size:84%;
+    .logo {
+      background-size: 80%;
+      margin-top:4px;
+      a {
+        width:130px;
+        height:20px;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+/*Scaffold*/
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -18,16 +149,6 @@ pre {
   font-size: 11px;
 }
 
-a {
-  color: #000;
-  &:visited {
-    color: #666;
-  }
-  &:hover {
-    color: #fff;
-    background-color: #000;
-  }
-}
 
 div {
   &.field, &.actions {

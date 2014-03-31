@@ -1,3 +1,116 @@
 // Place all the styles related to the homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$pink: #fd75a2;
+$pink-dark: #a63c5f;
+$very-dark:#3a2d31;
+$purple: #7f5060;
+
+/*DASHBOARD*/
+ul.dashboard {
+  padding:0;
+  li {
+    display:block;
+    float:left;
+    width:45%;
+    margin:1.5% 3% 1.5% 0%;
+    /*background-color: #282828;*/
+    text-align: center;
+    font-size: 30px;
+    background-color:#fff;
+    border: 2px solid $purple;
+    border-radius: 4px;
+    a {
+      text-decoration: none;
+      color:$purple;
+      padding:20px 0;
+      &:hover {color:#fff;}
+    }
+    span {
+      display: block;
+      color:$purple;
+      font-size:20px;
+      padding:5px;
+    }
+    &:hover {
+    background-color: $very-dark;
+    span {color:#fff;}
+    border: 2px solid $very-dark;
+    }
+  }
+}
+
+.instructions {
+  padding: 9px 14px;
+  margin-bottom: 14px;
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  font-weight: 300;
+}
+
+/*LOGIN, USER ACCOUNTS, AND SIGNUP PAGES*/
+body.registrations-new, body.sessions-new, body.passwords-new, body.registrations-create, body.registrations-edit {
+  background: $very-dark;
+  .form {
+    margin:10px auto 0 auto;
+  	width:400px;
+    	input {
+    		width:100%;
+    		padding:5px 4px;
+    		font-size: 16px;
+    		margin-bottom:12px;
+    	}
+      .edit_user {
+        i {
+          font-size: 12px;
+          color:#fff;
+        }
+      }
+    	input[type="submit"] {
+    	width:30%;
+   		font-weight: 100;
+  		padding:8px;
+  		margin-top:10px;
+    	}
+    	input[type="checkbox"] {
+    		width:20px;
+    		border:none;
+    	}
+    	h2 {
+    		text-align: center;
+    		font-weight: 300;
+    		font-size: 48px;
+    		color:#fff;
+    		margin-bottom:20px;
+    	}
+    	label {
+    		color:#fff;
+    		font-size: 17px;
+    		font-weight: 500;
+    	}
+    	span.links, p {
+    		color:#fff;
+    		display: inline-block;
+    		line-height: 2;
+    	}
+    	/*a {
+    		color:$pink;
+    		&:hover {
+  		    color: #152836;
+  		  }
+    	}*/
+  }
+}
+.cancel_account {
+  h3 {
+    font-size: 18px;
+    color:#fff;
+    margin: 15px 0 5px 0;
+  }
+  input[type="submit"] {
+    width:50% !important;
+  }
+}
+

@@ -1,7 +1,11 @@
-<h1>Plan the perfect hen party, together.</h1>
-  <p>Landing page for website</p>
+<% if user_signed_in? %>
 
-<br>
+	<%= render 'dashboard' %>
 
-<%= render 'dashboard' %>
+<% else %>
+
+	<%= render 'home' %>
+
+<% end %>
+
 
