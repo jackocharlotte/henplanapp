@@ -1,15 +1,20 @@
 <header>
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-12 col-sm-7 col-md-8">	
+			<div class="col-xs-12 col-sm-12 col-md-12">	
 				<div class="logo"><h1><%= link_to "Henplan", root_path %></h1></div>
-			</div>
-			<div class="col-xs-12 col-sm-5 col-md-4">
-				<nav class="span3 col">
+				
+				<nav>
 					<ul class="not-loggedin">
-						Button
+						<% if current_page?(register_path) %>
+						<button type="button" class="btn btn-primary login"><%= link_to "Login", login_path %></button>
+						<% end %>
+						<% if current_page?(login_path) %>
+						<button type="button" class="btn btn-primary login"><%= link_to "Register", register_path %></button>
+						<% end %>
 					</ul>
 				</nav>
+				
 			</div>
 		</div>
 	</div>
