@@ -3,10 +3,10 @@
         <article role="main">
           <div class="col-md-12">
             <div class="row">
-              <div class="col-xs-12 col-sm-6 col-md-6">
+              <div class="col-xs-12 col-sm-12 col-md-12 sub-menu">
                <h1><span class="icon-font">&#10003;</span>Task Lists</h1>
-              </div> 
-              <div class="col-xs-12 col-sm-6 col-md-6 new">
+               <%= link_to root_path, class: 'icon-font' do %> &#59229; <span>Back to dashboard</span><% end %>
+
                <%= link_to new_task_list_path, class: 'icon-font' do %> &#8862; <span>New task list</span>
                    <% end %>  
               </div> 
