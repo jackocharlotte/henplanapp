@@ -11,42 +11,43 @@
 
                    <%= link_to new_task_list_task_item_path, class: 'icon-font' do %> &#8862; <span>New task</span>
                    <% end %>  
-	            </div>
-         	</div>
+  	            </div>
+            	</div>
 
+            <table class="table task_items">
+                <thead>
+                  <tr>
+                    <th width="25%">Completed?</th>
+                    <th width="50%">Content</th>
+                    <th width="25%" class="functions">Functions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% @task_list.task_items.each do |task_item| %>
+                    <tr id="<%= dom_id(task_item) %>">
+                        <td>
+                          <% if task_item.completed? %>
+                            <%= task_item.completed_at %>
+                          <% else %>
+                            <%= link_to "Mark Complete", complete_task_list_task_item_path(task_item), method: :patch %>
+                          <% end %>
+                        </td>
+                        <td><%= task_item.content %></td>
+                        <td class="functions">
+                          <%= link_to edit_task_list_task_item_path(task_item), class: 'icon-font' do %> &#9998; <span>Edit</span>
+                          <% end %>
 
-        <table class="table task_items">
-          <thead>
-            <tr>
-              <th width="25%">Completed?</th>
-              <th width="50%">Content</th>
-              <th width="25%" class="functions">Functions</th>
-            </tr>
-          </thead>
-          <tbody>
-          <% @task_list.task_items.each do |task_item| %>
-          <tr id="<%= dom_id(task_item) %>">
-            <td>
-              <% if task_item.completed? %>
-                <%= task_item.completed_at %>
-              <% else %>
-                <%= link_to "Mark Complete", complete_task_list_task_item_path(task_item), method: :patch %>
-              <% end %>
-            </td>
-            <td><%= task_item.content %></td>
-            <td class="functions">
-              <%= link_to edit_task_list_task_item_path(task_item), class: 'icon-font' do %> &#9998; <span>Edit</span>
-              <% end %>
+                          <%= link_to task_list_task_item_path(task_item), method: :delete, data: { confirm: 'Are you sure?' }, class: 'icon-font' do %> &#59177; 
+                          <span>Delete</span> 
+                          <% end %>
+                        </td>
+                  </tr>
+                <% end %>
+            </tbody>
+         </table>
 
-              <%= link_to task_list_task_item_path(task_item), method: :delete, data: { confirm: 'Are you sure?' }, class: 'icon-font' do %> &#59177; 
-              <span>Delete</span> 
-              <% end %>
+       </div>
 
-            </td>
-          </tr>
-          <% end %>
-          </tbody>
-        </table>
     </article>
   </div>
 </div>

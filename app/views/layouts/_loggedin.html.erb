@@ -1,21 +1,23 @@
 <header>
 	<div class="container">
-		<div class="col-xs-12 col-sm-7 col-md-7">	
-			<div class="logo"><h1><%= link_to "Henplan", root_path %></h1></div>
-			<p><span class="count">125</span> days until Emma's hen party!</p>
-		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-7 col-md-7">	
+				<div class="logo"><h1><%= link_to "Henplan", root_path %></h1></div>
+				<p><span class="count">125</span> days until Emma's hen party!</p>
+			</div>
 
-		<div class="col-xs-12 col-sm-5 col-md-5">
-			<nav>
-				<ul class="loggedin">
-					<li><button type="button" class="btn btn-primary"><%= link_to "Log out", logout_path %></button></li>	
-					<li><button type="button" class="btn btn-primary"><%= link_to root_path, class: 'icon-font' do %>&#10067;<% end %></button></li>
-					<li><button type="button" class="btn btn-primary"><%= link_to root_path, class: 'icon-font' do %>&#128276;<% end %></button></li>				
-					<li><button type="button" class="btn btn-primary"><%= link_to root_path, class: 'icon-font' do %>&#59136;<% end %></button></li>	
-					<li><button type="button" class="btn btn-primary"><%= link_to root_path, class: 'icon-font' do %>&#8962;<% end %></button></li>
-					<li><button type="button" class="btn btn-primary"><%= link_to edit_user_registration_path, class: 'icon-font' do %>&#9881; <span><%= current_user.username %></span><% end %></button></li>
-				</ul>
-			</nav>
+			<div class="col-xs-12 col-sm-5 col-md-5">
+				<nav>
+					<ul class="loggedin">
+						<li><button type="button" class="btn btn-primary"><%= link_to "Log out", logout_path %></button></li>	
+						<li><button type="button" class="btn btn-primary"><%= link_to root_path, class: 'icon-font' do %>&#10067;<% end %></button></li>
+						<li><button type="button" class="btn btn-primary"><%= link_to root_path, class: 'icon-font' do %>&#128276;<% end %></button></li>				
+						<li><button type="button" class="btn btn-primary"><%= link_to root_path, class: 'icon-font' do %>&#59136;<% end %></button></li>	
+						<li><button type="button" class="btn btn-primary"><%= link_to root_path, class: 'icon-font' do %>&#8962;<% end %></button></li>
+						<li><button type="button" class="btn btn-primary"><%= link_to edit_user_registration_path, class: 'icon-font' do %>&#9881; <span><%= current_user.username %></span><% end %></button></li>
+					</ul>
+				</nav>
+			</div>
 		</div>
 	</div>
 </header>
