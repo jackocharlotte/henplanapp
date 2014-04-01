@@ -116,13 +116,17 @@ nav{
 
 /*BUTTONS*/
 input[type="submit"], .login_btn {
-  background-color: #cc6571;
+  background-color: $pink;
   border:none;
   color:#fff;
   font-weight: 500;
   padding:5px 15px;
   text-decoration: none;
   cursor: pointer;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  margin:10px 0;
 }
 
 /* MEDIA QUERIES */

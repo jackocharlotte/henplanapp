@@ -11,7 +11,9 @@
 <% end %>
 
 
-<%= form.label :content %>
+<%= form.label :content %><br/>
 <%= form.text_field :content %>
-
+<br/>
 <%= form.submit "Save" %>
+<br/>
+<%= link_to task_list_task_items_path, class: 'icon-font' do %> &#59229; <span>Back to task lists</span><% end %>

@@ -1,6 +1,14 @@
-<h1>Editing <%= @task_list.title %></h1>
+<div class="container">
+    <div class="row tasks">
+        <article role="main">
+			<div class="padded col-md-6">
 
-<%= render 'form' %>
+				<h1>Editing <%= @task_list.title %></h1>
 
-<%= link_to 'Show', @task_list %> |
-<%= link_to 'Back', task_lists_path %>
+				<%= render 'form' %>
+
+				<%= link_to task_lists_path, class: 'icon-font' do %> &#59229; <span>Back to <%= @task_list.title %></span><% end %>
+			</div>
+     	</div>
+  	</article>
+</div>

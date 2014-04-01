@@ -1,12 +1,12 @@
 <div class="container">
-    <div class="row tasks ">
+    <div class="row tasks">
         <article role="main">
-			<div class="padded col-md-4">
+			<div class="padded col-md-6">
 				<h1>New Task list</h1>
 
 				<%= render 'form' %>
 
-				<%= link_to 'Back', task_lists_path %>
+				<%= link_to task_lists_path, class: 'icon-font' do %> &#59229; <span>Back to task lists</span><% end %>
 			</div>
      	</div>
   	</article>

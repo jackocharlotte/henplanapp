@@ -1,4 +1,14 @@
-<h1><%= @task_list.title %> - Editing Task List Item</h1>
-<%= form_for [@task_list, @task_item] do |form| %>
-  <%= render partial: form %>
-<% end %>
+<div class="container">
+    <div class="row tasks">
+        <article role="main">
+			<div class="padded col-md-10">
+
+				<h1><%= @task_list.title %> - Editing Task List Item</h1>
+				<%= form_for [@task_list, @task_item] do |form| %>
+				  <%= render partial: form %>
+				<% end %>
+
+			</div>
+     	</div>
+  	</article>
+</div>
