@@ -13,18 +13,21 @@
                      <% end %>  
 
                 </div> 
-             </div> 
+              </div> 
         
-                 
+              <ul class="sums">
+                  <li>Total attendees = <span class="count"><%= @attendees.count %></span>  </li>
+                  <li>Total money recieved = <span class="count"> £<%= @attendees.sum(:money) %></span> </li>
+              </ul>
 
             <table class="table">
                 <thead>
                   <tr>
                     <th width="20%">Name</th>
                     <th width="15%">Email</th>
-                    <th width="15%">Money</th>
-                    <th width="25%">Notes</th>
-                    <th width="25%">Functions</th>
+                    <th width="10%">Money</th>
+                    <th width="30%">Notes</th>
+                    <th class="functions" width="25%">Functions</th>
                   </tr>
                 </thead>
 
@@ -33,7 +36,7 @@
                     <tr>
                       <td><%= attendee.name %></td>
                       <td><%= attendee.email %></td>
-                      <td><%= attendee.money %></td>
+                      <td>£<%= attendee.money %></td>
                       <td><%= attendee.notes %></td>
 
                       <td class="functions">
@@ -48,9 +51,7 @@
                   <% end %>
                 </tbody>
             </table>
-
-            <p class="sums">Total attendees = <%= @attendees.count %> </p>
-
+            
           </div>
 
         </article>

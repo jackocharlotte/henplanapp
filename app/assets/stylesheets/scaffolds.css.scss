@@ -54,9 +54,6 @@ header{
     display: block;
     float: left;
     color:#fff;
-    .count {
-      font-weight: 700;
-    }
   }
   h1 {
     margin-bottom: 0;
@@ -146,6 +143,10 @@ input[type="submit"], .login_btn {
 .no-items {
   clear:both;
   padding:25px 15px;
+}
+
+.count {
+  font-weight: 700;
 }
 
 /*Scaffold*/
