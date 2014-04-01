@@ -14,34 +14,48 @@
             </div>
 
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @notes.each do |note| %>
-      <tr>
-        <td><%= note.title %></td>
-        <td><%= note.content %></td>
-        <td><%= link_to 'Show', note %></td>
-        <td><%= link_to 'Edit', edit_note_path(note) %></td>
-        <td><%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+          <% if @notes.present? %>
+              <% @notes.each do |note| %>
+              
+                  <div class="tasks col-md-6" id="<%= dom_id(note) %>">
+                      <div class="padded">
+                         <h2><%= note.title %></h2>
+                         
+                         <p class="created"> Created: <%= note.created_at.strftime("%d %b. %Y") %></p>
+        
 
-<br>
-
-
-
+                         <ul>  
+                            <li>
+                              <%= link_to note, class: 'icon-font' do %>
+                              &#57349;
+                              <span>View tasks</span>
+                              <% end %>
+                            </li>
+                            
+                            <li>
+                              <%= link_to edit_note_path(note), class: 'icon-font' do %>
+                              &#9998;
+                              <span>Edit</span>
+                              <% end %>
+                            </li>
+                            <li>
+                              <%= link_to note, method: :delete, data: { confirm: 'Are you sure?' }, class: 'icon-font' do %>
+                              &#59177;
+                              <span>Delete</span>
+                              <% end %>
+                            </li>
+                    
+                          </ul>
+                      </div>
+                  </div>
+                <% end %>
+              <% else %>
+               <div class="no-items">
+                  You have no task lists. Create a <%= link_to 'new one.',new_note_path %>
+                </div>
+              </div>
+            <% end %>
 
         </article>
     </div>
