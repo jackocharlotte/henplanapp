@@ -11,8 +11,11 @@
 
                      <%= link_to new_attendee_path, class: 'icon-font' do %> &#8862; <span>New attendee</span>
                      <% end %>  
-                </div>  
-             </div>       
+
+                </div> 
+             </div> 
+        
+                 
 
             <table class="table">
                 <thead>
@@ -45,6 +48,8 @@
                   <% end %>
                 </tbody>
             </table>
+
+            <p class="sums">Total attendees = <%= @attendees.count %> </p>
 
           </div>
 
