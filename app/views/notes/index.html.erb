@@ -12,50 +12,57 @@
                     </div> 
                 </div>
             </div>
+            
+            <div class="col-xs-12 col-sm-8 col-md-8">
 
-
-
-          <% if @notes.present? %>
-              <% @notes.each do |note| %>
-              
-                  <div class="tasks col-md-6" id="<%= dom_id(note) %>">
-                      <div class="padded">
-                         <h2><%= note.title %></h2>
-                         
-                         <p class="created"> Created: <%= note.created_at.strftime("%d %b. %Y") %></p>
-        
-
-                         <ul>  
-                            <li>
-                              <%= link_to note, class: 'icon-font' do %>
-                              &#57349;
-                              <span>View tasks</span>
-                              <% end %>
-                            </li>
-                            
-                            <li>
-                              <%= link_to edit_note_path(note), class: 'icon-font' do %>
-                              &#9998;
-                              <span>Edit</span>
-                              <% end %>
-                            </li>
-                            <li>
-                              <%= link_to note, method: :delete, data: { confirm: 'Are you sure?' }, class: 'icon-font' do %>
-                              &#59177;
-                              <span>Delete</span>
-                              <% end %>
-                            </li>
+                <% if @notes.present? %>
+                    <% @notes.each do |note| %>
                     
-                          </ul>
-                      </div>
-                  </div>
-                <% end %>
-              <% else %>
-               <div class="no-items">
-                  You have no task lists. Create a <%= link_to 'new one.',new_note_path %>
-                </div>
+                        <div class="tasks" id="<%= dom_id(note) %>">
+                            <div class="padded">
+                               <h2><%= note.title %></h2>
+                               
+                               <p class="created">By: Username | <%= note.created_at.strftime("%d %b. %Y") %></p>
+                               <p><%= note.content.truncate(200, separator: ' ') %></p>
+
+                               <ul>  
+                                  <li>
+                                    <%= link_to note, class: 'icon-font' do %>
+                                    &#57349;
+                                    <span>Open note</span>
+                                    <% end %>
+                                  </li>
+                                  
+                                  <li>
+                                    <%= link_to edit_note_path(note), class: 'icon-font' do %>
+                                    &#9998;
+                                    <span>Edit</span>
+                                    <% end %>
+                                  </li>
+                                  <li>
+                                    <%= link_to note, method: :delete, data: { confirm: 'Are you sure?' }, class: 'icon-font' do %>
+                                    &#59177;
+                                    <span>Delete</span>
+                                    <% end %>
+                                  </li>
+                          
+                                </ul>
+                            </div>
+                        </div>
+                      <% end %>
+                    <% else %>
+                     <div class="no-items">
+                        You have no task lists. Create a <%= link_to 'new one.',new_note_path %>
+                     </div>
+                 <% end %>
+               
+            </div> <!--8-->
+            
+            <div class="tasks col-xs-4 col-sm-4 col-md-4">
+              <div class="padded">
+                <p>Activity</p>
               </div>
-            <% end %>
+            </div><!--4-->
 
         </article>
     </div>
