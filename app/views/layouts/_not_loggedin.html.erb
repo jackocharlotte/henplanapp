@@ -6,11 +6,10 @@
 				
 				<nav>
 					<ul class="not-loggedin">
-						<% if current_page?(register_path) %>
-						<button type="button" class="btn btn-primary login"><%= link_to "Login", login_path %></button>
-						<% end %>
 						<% if current_page?(login_path) %>
-						<button type="button" class="btn btn-primary login"><%= link_to "Register", register_path %></button>
+							<button type="button" class="btn btn-primary login"><%= link_to "Register", register_path %></button>
+						<% else %>
+							<button type="button" class="btn btn-primary login"><%= link_to "Login", login_path %></button>
 						<% end %>
 					</ul>
 				</nav>
