@@ -34,9 +34,9 @@ ul.dashboard {
       margin-top:15px;
     }
     &:hover {
-    background-color: $very-dark;
-    span {color:#fff;}
-    border: 2px solid $very-dark;
+      background-color: $very-dark;
+      span {color:#fff;}
+      border: 2px solid $very-dark;
     }
   }
 }
@@ -50,11 +50,14 @@ ul.dashboard {
   font-weight: 300;
 }
 
-.sessions-new {
+.sessions-new, .registrations-new {
   background:$very-dark;
   .form {
     margin:10px auto 0 auto;
     width:400px;
+    @media (max-width: 480px) {
+      width:320px;
+    }  
     input {
         width:100%;
         padding:5px 4px;

@@ -4,15 +4,11 @@
 			<div class="col-xs-12 col-sm-12 col-md-12">	
 				<div class="logo"><h1><%= link_to "Henplan", root_path %></h1></div>
 				
-				<nav>
-					<ul class="not-loggedin">
-						<% if current_page?(login_path) %>
-							<button type="button" class="btn btn-primary login"><%= link_to "Register", register_path %></button>
-						<% else %>
-							<button type="button" class="btn btn-primary login"><%= link_to "Login", login_path %></button>
-						<% end %>
-					</ul>
-				</nav>
+					<% if current_page?(login_path) %>
+						<button type="button" class="btn btn-primary login"><%= link_to "Register", register_path %></button>
+					<% else %>
+						<button type="button" class="btn btn-primary login"><%= link_to "Login", login_path %></button>
+					<% end %>
 				
 			</div>
 		</div>
