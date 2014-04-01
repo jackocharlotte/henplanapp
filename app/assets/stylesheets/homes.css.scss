@@ -94,5 +94,11 @@ ul.dashboard {
       display: inline-block;
       line-height: 2;
     }
+    a {
+      color:$pink;
+      &:hover {
+        color: #fff;
+      }
+    }
   }
 }
