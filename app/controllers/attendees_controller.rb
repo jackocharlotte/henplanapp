@@ -28,7 +28,7 @@ class AttendeesController < ApplicationController
 
     respond_to do |format|
       if @attendee.save
-        format.html { redirect_to @attendee, notice: 'Attendee was successfully created.' }
+        format.html { redirect_to attendees_url, notice: 'Attendee was successfully created.' }
         format.json { render action: 'show', status: :created, location: @attendee }
       else
         format.html { render action: 'new' }
@@ -42,7 +42,7 @@ class AttendeesController < ApplicationController
   def update
     respond_to do |format|
       if @attendee.update(attendee_params)
-        format.html { redirect_to @attendee, notice: 'Attendee was successfully updated.' }
+        format.html { redirect_to attendees_url, notice: 'Attendee was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
