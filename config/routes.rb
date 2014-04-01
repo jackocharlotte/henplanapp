@@ -1,5 +1,7 @@
 HenplanppV1::Application.routes.draw do
 
+  resources :notes
+
   resources :attendees
 
   devise_for :users

@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row">
+        <article role="main">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 sub-menu">
+                       <h1><span class="icon-font">&#10003;</span>Notes</h1>
+                       <%= link_to root_path, class: 'icon-font' do %> &#59229; <span>Back to dashboard</span><% end %>
+
+                       <%= link_to new_note_path, class: 'icon-font' do %> &#8862; <span>New Note</span>
+                           <% end %>  
+                    </div> 
+                </div>
+            </div>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @notes.each do |note| %>
+      <tr>
+        <td><%= note.title %></td>
+        <td><%= note.content %></td>
+        <td><%= link_to 'Show', note %></td>
+        <td><%= link_to 'Edit', edit_note_path(note) %></td>
+        <td><%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+
+
+        </article>
+    </div>
+</div>
