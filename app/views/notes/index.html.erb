@@ -1,68 +1,118 @@
-<div class="container">
-    <div class="row">
-        <article role="main">
-            <div class="col-md-12">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12 sub-menu">
-                       <h1><span class="icon-font">&#10003;</span>Notes</h1>
-                       <%= link_to root_path, class: 'icon-font' do %> &#59229; <span>Back to dashboard</span><% end %>
-
-                       <%= link_to new_note_path, class: 'icon-font' do %> &#8862; <span>New Note</span>
-                           <% end %>  
-                    </div> 
-                </div>
-            </div>
-            
-            <div class="col-xs-12 col-sm-8 col-md-8">
-
-                <% if @notes.present? %>
-                    <% @notes.each do |note| %>
-                    
-                        <div class="tasks" id="<%= dom_id(note) %>">
-                            <div class="padded">
-                               <h2><%= note.title %></h2>
-                               
-                               <p class="created">By: Username | <%= note.created_at.strftime("%d %b. %Y") %></p>
-                               <p><%= note.content.truncate(200, separator: ' ') %></p>
-
-                               <ul>  
-                                  <li>
-                                    <%= link_to note, class: 'icon-font' do %>
-                                    &#57349;
-                                    <span>Open note</span>
-                                    <% end %>
-                                  </li>
-                                  
-                                  <li>
-                                    <%= link_to edit_note_path(note), class: 'icon-font' do %>
-                                    &#9998;
-                                    <span>Edit</span>
-                                    <% end %>
-                                  </li>
-                                  <li>
-                                    <%= link_to note, method: :delete, data: { confirm: 'Are you sure?' }, class: 'icon-font' do %>
-                                    &#59177;
-                                    <span>Delete</span>
-                                    <% end %>
-                                  </li>
-                          
-                                </ul>
-                            </div>
-                        </div>
-                      <% end %>
-                    <% else %>
-                     <div class="no-items">
-                        You have no task lists. Create a <%= link_to 'new one.',new_note_path %>
-                     </div>
-                 <% end %>
-               
-            </div> <!--8-->
-            
-            <div class="tasks col-xs-4 col-sm-4 col-md-4">
-              <div class="padded">
-                <p>Activity</p>
+<div class="lw-header">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                     <h1><span class="icon-font">&#10003;</span>Notes</h1>
+                       
+                  </div> 
               </div>
-            </div><!--4-->
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="container" >
+    <div class="row">
+          <article role="main">  
+            <div class="col-md-12 sub-menu">
+              <%= link_to root_path, class: 'icon-font' do %> &#59229; <span>Back to dashboard</span><% end %>
+
+              <%= link_to new_note_path, class: 'icon-font' do %> &#8862; <span>New Note</span><% end %>
+            </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="notes first">
+                    <div class="padded">
+                       <h2>Accommodation in Bournemouth</h2>
+                       
+                       <p class="created">By: Lottejackson | 27th March. 2014</p>
+                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, eveniet accusamus sapiente provident sint nobis magni officiis est distinctio voluptates rem cum mollitia...</p>
+
+                       <ul>                    
+                          <li>
+                            <%= link_to notes_path, class: 'icon-font' do %>
+                            &#9998;
+                            <span>Edit</span>
+                            <% end %>
+                          </li>
+                          <li>
+                            <%= link_to notes_path, class: 'icon-font' do %>
+                            &#59177;
+                            <span>Delete</span>
+                            <% end %>
+                          </li>
+                        </ul>
+                    </div>
+                </div><!--padded-->
+                    
+
+              <% if @notes.present? %>
+                  <% @notes.each do |note| %>
+                  
+                      <div class="notes" id="<%= dom_id(note) %>">
+                          <div class="padded">
+                             <h2><%= note.title %></h2>
+                             
+                             <p class="created">By: Username | <%= note.created_at.strftime("%d %b. %Y") %></p>
+                             <p><%= note.content.truncate(200) %></p>
+
+                             <ul>  
+                                <li>
+                                  <%= link_to note, class: 'icon-font' do %>
+                                  &#57349;
+                                  <span>Open note</span>
+                                  <% end %>
+                                </li>
+                                
+                                <li>
+                                  <%= link_to edit_note_path(note), class: 'icon-font' do %>
+                                  &#9998;
+                                  <span>Edit</span>
+                                  <% end %>
+                                </li>
+                                <li>
+                                  <%= link_to note, method: :delete, data: { confirm: 'Are you sure?' }, class: 'icon-font' do %>
+                                  &#59177;
+                                  <span>Delete</span>
+                                  <% end %>
+                                </li>
+                        
+                              </ul>
+                          </div>
+                      </div>
+                    <% end %>
+                  <% else %>
+                   <div class="no-items">
+                      You have no task lists. Create a <%= link_to 'new one.',new_note_path %>
+                   </div>
+               <% end %>
+             
+          </div> <!--6-->
+            
+          <div class="notes col-xs-4 col-sm-6 col-md-6">
+              <div class="padded">
+                <p>27th March. 2014  |  By: Lottejackson</p>
+                <hr>
+                <p class="count">Accommodation in Bournemouth</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, recusandae, nihil! Explicabo, voluptas, dignissimos, dicta vero minima cum nesciunt sit quasi eveniet beatae iure mollitia doloribus esse molestias in ea rerum omnis vitae similique sint vel blanditiis atque debitis enim magnam consequatur maxime praesentium tenetur architecto rem? Sequi tenetur optio labore necessitatibus explicabo delectus voluptatibus. Est, labore aliquam eum voluptatibus error ipsum similique laboriosam sint distinctio id! Recusandae necessitatibus voluptas corporis repellat velit commodi fugit laudantium distinctio. Ad, quam, consequuntur, obcaecati, labore molestias saepe illo voluptate facilis sequi ut laboriosam cum officiis facere blanditiis tenetur voluptatum dignissimos atque fugit veniam.</p>
+                <ul>                    
+                    <li>
+                      <%= link_to notes_path, class: 'icon-font' do %>
+                      &#9998;
+                      <span>Edit</span>
+                      <% end %>
+                    </li>
+                    <li>
+                      <%= link_to notes_path, class: 'icon-font' do %>
+                      &#59177;
+                      <span>Delete</span>
+                      <% end %>
+                    </li>
+                </ul>
+              </div>
+          </div><!--6-->
 
         </article>
     </div>
