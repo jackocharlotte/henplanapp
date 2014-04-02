@@ -7,6 +7,23 @@ $pink-dark: #a63c5f;
 $very-dark: #3a2d31;
 $purple: #7f5060;
 
+body.task_lists-index {
+  background: url(image_path('bg-6-full.jpg')) repeat; 
+}
+
+.tasklists-layout {margin-left: -12px;}
+
+.activity {
+  img {
+    margin-right:10px;
+    float:left;
+  }
+  h4 {color:$purple; font-weight: 700;}
+  span {
+    color:$purple;
+    font-size: 14px;
+  }
+}
 .tasks {
   margin: 1em 0 1em 0;
   input[type=text], textarea {
@@ -16,23 +33,23 @@ $purple: #7f5060;
   .padded {
     background:#fff;
     padding:1em 1.5em;
-    border: 1px solid #d1b8c0;
+    border: 2px solid #d1b8c0;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
     word-wrap:break-word;
   }
  
-  h2 {
-    margin:0 0px 10px 0;
-  }
   ul li {
     list-style: none;
     margin-right: 20px;
     display: inline-block;
     margin-top:10px;
   }
-  .created {font-size: 14px;}
+  .created {
+    font-size: 15px;
+    color:$purple;
+  }
 }
 
 .new {

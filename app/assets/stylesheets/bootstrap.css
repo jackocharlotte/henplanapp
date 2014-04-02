@@ -391,13 +391,13 @@ h6 .small,
 }
 h1,
 .h1,
-h2,
-.h2,
 h3,
 .h3 {
   margin-top: 20px;
   margin-bottom: 10px;
 }
+h2 {    margin:0 0px 10px 0;}
+
 h1 small,
 .h1 small,
 h2 small,
@@ -438,7 +438,7 @@ h6 .small,
 
 h2,
 .h2 {
-  font-size: 30px;
+  font-size: 26px;
 }
 h3,
 .h3 {

@@ -125,11 +125,12 @@ nav{
   }
 }
 
-a.sub-menu {
-    margin-left: 20px; 
+a.sub-menu, .sub-menu a { 
     padding-top:15px;
     float:right;
 }
+.sub-menu .left {float:left;}
+
 /*Submit buttons*/
 input[type="submit"], .login_btn {
   background-color: $pink;

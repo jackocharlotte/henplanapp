@@ -27,8 +27,11 @@ body.notes-index {
   .padded {
     background:#fff;
     padding:1em 1.5em;
-    border: 1px solid #d1b8c0;
+    border: 2px solid #d1b8c0;
     word-wrap:break-word;
+        -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
   }
   .date {color:$purple; font-weight: 500;}
   h2 {
@@ -45,5 +48,9 @@ body.notes-index {
 }
 
 .notes.first { 
-	border:2px solid $purple; 
+	border:3px solid $purple; 
+	-webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    .padded {border:none;}
 }

@@ -1,3 +1,22 @@
+<div class="lw-header">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                     <h1><span class="icon-font">&#10003;</span><%= @task_list.title %></h1>       
+                  </div> 
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+
+
+
 <div class="container">
     <div class="row">
         <article role="main">
@@ -5,11 +24,11 @@
         	<div class="col-md-12">
 	            <div class="row">
 	              <div class="col-xs-12 col-sm-12 col-md-12 sub-menu">
-	              	 <h1><span class="icon-font">&#10003;</span><%= @task_list.title %></h1>
+	              	 
                    <%= link_to task_lists_path, class: 'icon-font' do %> &#59229; <span>Back to task lists</span>
                    <% end %>
 
-                   <%= link_to new_task_list_task_item_path, class: 'icon-font' do %> &#8862; <span>New task</span>
+                   <%= link_to new_task_list_task_item_path, class: 'icon-font left' do %> &#8862; <span>New task</span>
                    <% end %>  
   	            </div>
             	</div>

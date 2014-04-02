@@ -4,7 +4,7 @@
           <div class="col-md-12">
               <div class="row">
                   <div class="col-xs-12 col-sm-12 col-md-12">
-                     <h1><span class="icon-font">&#10003;</span>Task lists</h1>
+                     <h1><span class="icon-font">&#10003;</span>Task Lists</h1>
                        
                   </div> 
               </div>
@@ -19,60 +19,85 @@
 
            <div class="col-md-12 ">
               <div class="dropdown">
-                <a class="filter" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html">
-                  All task lists <span class="caret"></span>        
-                </a>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                  <li><a href="">My task lists</a></li>
-                </ul>
+                  <a class="filter" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html">
+                    All Task Lists <span class="caret"></span>        
+                  </a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                    <li><a href="">My Task Lists</a></li>
+                  </ul>
               </div>
+              <%= link_to new_task_list_path, class: 'icon-font sub-menu' do %> &#8862; <span>New Task List</span><% end %>
+          </div>
+            
+          <div class="col-xs-12 col-sm-12 col-md-8 tasklists-layout">
 
-              <%= link_to new_task_list_path, class: 'icon-font sub-menu' do %> &#8862; <span>New Note</span><% end %>
-            </div>
+              <% if @task_lists.present? %>
+                <% @task_lists.each do |task_list| %>
+                
+                    <div class="tasks col-xs-12 col-sm-6" id="<%= dom_id(task_list) %>">
+                        <div class="padded">
+                           <h2><%= task_list.title %></h2>
+                           
+                           <p class="created">Assigned to: <%= User.find(task_list.user_id).username %> <br/> Created: <%= task_list.created_at.strftime("%d %b. %Y") %></p>
+                               <%if task_list.description.present? %>
+                                 <p><%= task_list.description %></p>
+                               <%end%>
 
-            <% if @task_lists.present? %>
-              <% @task_lists.each do |task_list| %>
-              
-                  <div class="tasks col-md-6" id="<%= dom_id(task_list) %>">
-                      <div class="padded">
-                         <h2><%= task_list.title %></h2>
-                         
-                         <p class="created">Assigned to: <%= User.find(task_list.user_id).username %> | Created: <%= task_list.created_at.strftime("%d %b. %Y") %></p>
-                             <%if task_list.description.present? %>
-                               <p>Description: <%= task_list.description %></p>
-                             <%end%>
-
-                         <ul>  
-                            <li>
-                              <%= link_to task_list_task_items_path(task_list), class: 'icon-font' do %>
-                              &#57349;
-                              <span>View tasks</span>
-                              <% end %>
-                            </li>
-                            
-                            <li>
-                              <%= link_to edit_task_list_path(task_list), class: 'icon-font' do %>
-                              &#9998;
-                              <span>Edit</span>
-                              <% end %>
-                            </li>
-                            <li>
-                              <%= link_to task_list, method: :delete, data: { confirm: 'Are you sure?' }, class: 'icon-font' do %>
-                              &#59177;
-                              <span>Delete</span>
-                              <% end %>
-                            </li>
-                    
-                          </ul>
-                      </div>
+                           <ul>  
+                              <li>
+                                <%= link_to task_list_task_items_path(task_list), class: 'icon-font' do %>
+                                &#57349;
+                                <span>View tasks</span>
+                                <% end %>
+                              </li>
+                              
+                              <li>
+                                <%= link_to edit_task_list_path(task_list), class: 'icon-font' do %>
+                                &#9998;
+                                <span>Edit</span>
+                                <% end %>
+                              </li>
+                              <li>
+                                <%= link_to task_list, method: :delete, data: { confirm: 'Are you sure?' }, class: 'icon-font' do %>
+                                &#59177;
+                                <span>Delete</span>
+                                <% end %>
+                              </li>
+                      
+                            </ul>
+                        </div>
+                    </div>
+                  <% end %>
+                <% else %>
+                 <div class="no-items">
+                    You have no task lists. Create a <%= link_to 'new one.',new_task_list_path %>
                   </div>
-                <% end %>
-              <% else %>
-               <div class="no-items">
-                  You have no task lists. Create a <%= link_to 'new one.',new_task_list_path %>
                 </div>
+              <% end %>
+
+          </div><!--6-->
+
+
+          <!-- Static content for prototype to demonstrate the display of entire notes-->
+          <div class="tasks col-xs-12 col-sm-12 col-md-4">
+              <div class="padded activity">
+                <h4>Recent Activity</h4>
+                <hr>
+                <img src="http://lorempixel.com/g/50/50">
+                <p>Lottejackson added 5 tasks to <a href="">Music</a> <span>2 hours ago. </span> </p>
+                <hr>
+                <img src="http://lorempixel.com/g/50/50">
+                <p>Kirsten Chapman Smith completed 3 tasks in <a href="">Shopping list</a> <span>12 hours ago. </span></p>
+                <hr>
+                <img src="http://lorempixel.com/g/50/50">
+                <p>Kirsten Chapman Smith created task list called <a href="">Shopping list</a> <span>3 days ago. </span></p>
+                <hr>
+                <img src="http://lorempixel.com/g/50/50">
+                <p>Lucy Jones-Wright completed the task <a href="">Confirm final numbers</a> in <a href="">Initial jobs</a> <span>5 days ago. </span></p>
+                <hr>
+              
               </div>
-            <% end %>
+          </div><!--6-->
               
         </article>
     </div>
