@@ -9,12 +9,12 @@
 			<div class="col-xs-12 col-sm-5 col-md-5">
 				<nav>
 					<ul class="loggedin">
-						<li><button type="button" class="btn btn-primary"><%= link_to "Log out", logout_path %></button></li>	
-						<li><button type="button" class="btn btn-primary"><%= link_to root_path, class: 'icon-font' do %>&#10067;<% end %></button></li>
-						<li><button type="button" class="btn btn-primary"><%= link_to root_path, class: 'icon-font' do %>&#128276;<% end %></button></li>				
-						<li><button type="button" class="btn btn-primary"><%= link_to root_path, class: 'icon-font' do %>&#59136;<% end %></button></li>	
-						<li><button type="button" class="btn btn-primary"><%= link_to root_path, class: 'icon-font' do %>&#8962;<% end %></button></li>
-						<li><button type="button" class="btn btn-primary"><%= link_to edit_user_registration_path, class: 'icon-font' do %>&#9881; <span><%= current_user.username %></span><% end %></button></li>
+						<li><%= link_to "Log out", logout_path, class: "btn btn-primary" %></li>	
+						<li><%= link_to root_path, class: 'icon-font btn btn-primary' do %>&#10067;<% end %></li>
+						<li><%= link_to root_path, class: 'icon-font btn btn-primary' do %>&#128276;<% end %></li>				
+						<li><%= link_to root_path, class: 'icon-font btn btn-primary' do %>&#59136;<% end %></li>	
+						<li><%= link_to root_path, class: 'icon-font btn btn-primary' do %>&#8962;<% end %></li>
+						<li><%= link_to edit_user_registration_path, class: 'icon-font btn btn-primary' do %>&#9881; <span><%= current_user.username %></span><% end %></li>
 					</ul>
 				</nav>
 			</div>
