@@ -5,9 +5,9 @@
 				<div class="logo"><h1><%= link_to "Henplan", root_path %></h1></div>
 				
 					<% if current_page?(login_path) %>
-						<button type="button" class="btn btn-primary login"><%= link_to "Register", register_path %></button>
+						<%= link_to "Register", register_path, class: "btn btn-primary login" %>
 					<% else %>
-						<button type="button" class="btn btn-primary login"><%= link_to "Login", login_path %></button>
+						<%= link_to "Login", login_path, class: "btn btn-primary login" %>
 					<% end %>
 				
 			</div>

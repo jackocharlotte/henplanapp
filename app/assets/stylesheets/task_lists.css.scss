@@ -2,12 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$pink: #fd75a2;
+$pink-dark: #a63c5f;
+$very-dark: #3a2d31;
+$purple: #7f5060;
+
 .tasks {
   margin: 1em 0 1em 0;
   input[type=text], textarea {
     width:100%;
     padding:5px;
   }
+ 
   h2 {
     margin:0 0px 10px 0;
   }
