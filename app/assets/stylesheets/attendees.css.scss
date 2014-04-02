@@ -8,13 +8,14 @@ $very-dark: #3a2d31;
 $purple: #7f5060;
 
 .sums {
-	background: $very-dark;
+	border-top:3px solid $very-dark;
 	margin-top:20px;
 	color:#fff;
 	
 	li {
 		list-style:none;
-		padding:15px;
+		padding:10px;
 		display:inline-block;
+		color:$very-dark;
 	}
 }
