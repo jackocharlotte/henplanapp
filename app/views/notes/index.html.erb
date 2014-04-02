@@ -13,16 +13,25 @@
   </div>
 </div>
 
-<div class="container" >
+<div class="container">
     <div class="row">
-          <article role="main">  
-            <div class="col-md-12 sub-menu">
-              <%= link_to root_path, class: 'icon-font' do %> &#59229; <span>Back to dashboard</span><% end %>
+        <article role="main">  
+          
+           <div class="col-md-12 ">
+              <div class="dropdown">
+                <a class="filter" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html">
+                  All notes <span class="caret"></span>        
+                </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                  <li><a href="">My Notes</a></li>
+                </ul>
+              </div>
 
-              <%= link_to new_note_path, class: 'icon-font' do %> &#8862; <span>New Note</span><% end %>
+              <%= link_to new_note_path, class: 'icon-font sub-menu' do %> &#8862; <span>New Note</span><% end %>
             </div>
-
-          <div class="col-xs-12 col-sm-6 col-md-6">
+            
+            <!--Static demo content for prototype-->
+            <div class="col-xs-12 col-sm-6 col-md-6">
                 <div class="notes first">
                     <div class="padded">
                        <h2>Accommodation in Bournemouth</h2>
@@ -45,9 +54,9 @@
                           </li>
                         </ul>
                     </div>
-                </div><!--padded-->
+                </div><!--notes first-->
                     
-
+              <!-- Dynamic content for prototype-->
               <% if @notes.present? %>
                   <% @notes.each do |note| %>
                   
@@ -59,13 +68,6 @@
                              <p><%= note.content.truncate(200) %></p>
 
                              <ul>  
-                                <li>
-                                  <%= link_to note, class: 'icon-font' do %>
-                                  &#57349;
-                                  <span>Open note</span>
-                                  <% end %>
-                                </li>
-                                
                                 <li>
                                   <%= link_to edit_note_path(note), class: 'icon-font' do %>
                                   &#9998;
@@ -91,12 +93,13 @@
              
           </div> <!--6-->
             
-          <div class="notes col-xs-4 col-sm-6 col-md-6">
-              <div class="padded">
-                <p>27th March. 2014  |  By: Lottejackson</p>
+          <!-- Static content for prototype to demonstrate the display of entire notes-->
+          <div class="notes col-xs-12 col-sm-6 col-md-6">
+              <div class="padded current">
+                <p><span class="date">27th March. 2014</span>  |  By: Lottejackson</p>
                 <hr>
                 <p class="count">Accommodation in Bournemouth</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, recusandae, nihil! Explicabo, voluptas, dignissimos, dicta vero minima cum nesciunt sit quasi eveniet beatae iure mollitia doloribus esse molestias in ea rerum omnis vitae similique sint vel blanditiis atque debitis enim magnam consequatur maxime praesentium tenetur architecto rem? Sequi tenetur optio labore necessitatibus explicabo delectus voluptatibus. Est, labore aliquam eum voluptatibus error ipsum similique laboriosam sint distinctio id! Recusandae necessitatibus voluptas corporis repellat velit commodi fugit laudantium distinctio. Ad, quam, consequuntur, obcaecati, labore molestias saepe illo voluptate facilis sequi ut laboriosam cum officiis facere blanditiis tenetur voluptatum dignissimos atque fugit veniam.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, recusandae, nihil! Explicabo, voluptas, dignissimos, dicta vero minima cum nesciunt sit quasi eveniet beatae iure mollitia doloribus esse molestias in ea rerum omnis vitae similique sint vel blanditiis atque debitis enim magnam consequatur maxime praesentium tenetur architecto rem?</p> <p>Sequi tenetur optio labore necessitatibus explicabo delectus voluptatibus. Est, labore aliquam eum voluptatibus error ipsum similique laboriosam sint distinctio id! Recusandae necessitatibus voluptas corporis repellat velit commodi fugit laudantium distinctio. Ad, quam, consequuntur, obcaecati, labore molestias saepe illo voluptate facilis sequi ut laboriosam cum officiis facere blanditiis tenetur voluptatum dignissimos atque fugit veniam.</p>
                 <ul>                    
                     <li>
                       <%= link_to notes_path, class: 'icon-font' do %>

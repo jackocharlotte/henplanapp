@@ -15,8 +15,8 @@ $purple: #7f5060;
 body{ 
   font: {
     family: 'Museo Sans', Helvetica, Arial, sans-serif;
-    weight: 500;
-    size:16px;
+    font-weight: 300;
+    size:15px;
   }
   color: #3a2d31;  
   background:#fbf6f6; /*f0e5e8*/
@@ -28,6 +28,12 @@ p, ol, ul, td {
   line-height: 1.5;
 }
 
+h1,
+.h1 {
+  font-size: 34px;
+  font-weight: 700;
+  color:$purple;
+}
 
 a.icon-font {
 font-family: 'Entypo';
@@ -108,7 +114,7 @@ nav{
   background-color:$pink;
   border:none;
   display:inline-block;
-  padding:6px 10px;
+  padding:6px 11px;
   text-decoration: none;
   font-size: 15px;
   &:hover {
@@ -119,10 +125,12 @@ nav{
   }
 }
 
-
-
-
-/*BUTTONS*/
+a.sub-menu {
+    margin-left: 20px; 
+    padding-top:15px;
+    float:right;
+}
+/*Submit buttons*/
 input[type="submit"], .login_btn {
   background-color: $pink;
   border:none;

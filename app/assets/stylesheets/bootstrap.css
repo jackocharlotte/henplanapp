@@ -54,7 +54,7 @@ abbr[title] {
 }
 b,
 strong {
-  font-weight: bold;
+  font-weight: 700;
 }
 dfn {
   font-style: italic;
@@ -435,10 +435,7 @@ h6 .small,
 .h6 .small {
   font-size: 75%;
 }
-h1,
-.h1 {
-  font-size: 36px;
-}
+
 h2,
 .h2 {
   font-size: 30px;
@@ -3085,7 +3082,6 @@ input[type="button"].btn-block {
 .dropdown-header {
   display: block;
   padding: 3px 20px;
-  font-size: 12px;
   line-height: 1.42857143;
   color: #999;
 }

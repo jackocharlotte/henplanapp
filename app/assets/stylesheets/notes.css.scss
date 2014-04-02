@@ -7,9 +7,20 @@ $pink-dark: #a63c5f;
 $very-dark: #3a2d31;
 $purple: #7f5060;
 
+body.notes-index {
+	background: url(image_path('light_grey.png')) repeat; 
+}
+
+.filter, .grid {
+	float:left;
+	margin-top:15px;
+	font-size: 16px;
+	width:48%;
+}
+
 .notes {
-  margin: 1em 0 1em 0;
-  input[type=text], textarea {
+  	margin: 1em 0 1em 0;
+  	input[type=text], textarea {
     width:100%;
     padding:5px;
   }
@@ -19,9 +30,10 @@ $purple: #7f5060;
     border: 1px solid #d1b8c0;
     word-wrap:break-word;
   }
- 
+  .date {color:$purple; font-weight: 500;}
   h2 {
-    margin:0 0px 10px 0;
+	   margin:0 0px 10px 0;
+	   font-size: 23px;
   }
   ul li {
     list-style: none;
@@ -32,4 +44,6 @@ $purple: #7f5060;
   .created {font-size: 14px;}
 }
 
-.notes.first { border:3px solid $pink; }
+.notes.first { 
+	border:2px solid $purple; 
+}
