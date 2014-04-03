@@ -7,6 +7,10 @@ $pink-dark: #a63c5f;
 $very-dark: #3a2d31;
 $purple: #7f5060;
 
+body.homes-index {
+    h3 {color:$purple;}
+}
+
 /*DASHBOARD*/
 ul.dashboard {
   padding:0;
@@ -40,6 +44,32 @@ ul.dashboard {
       span {color:#fff;}
       border: 2px solid $very-dark;
     }
+  }
+}
+
+.event_details {
+  .padded {
+    background-color: #fff;
+    padding:20px;
+    margin-top:20px;
+  }
+  label {margin:10px 0 0px 0;}
+  input, textarea {
+    background-color: #e6e4e5;
+    border:none;
+  }
+  input[type="text"] {
+    padding:5px;
+    width:100%;
+    border:none;
+  }
+  input[type="date"] {
+    padding-left:10px;
+  }
+  textarea {
+    width:100%;
+    height:33px;
+    padding:5px;
   }
 }
 
