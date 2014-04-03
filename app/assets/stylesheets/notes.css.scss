@@ -7,7 +7,7 @@ $pink-dark: #a63c5f;
 $very-dark: #3a2d31;
 $purple: #7f5060;
 
-body.notes-index {
+body.notes-index, body.notes-new, body.notes-edit {
 	background: url(image_path('light_grey.png')) repeat; 
 }
 
@@ -32,6 +32,7 @@ body.notes-index {
         -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
+    cursor:pointer;
   }
   .date {color:$purple; font-weight: 500;}
   h2 {
