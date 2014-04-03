@@ -1,6 +1,15 @@
-<h1>Editing note</h1>
+<div class="container">
+    <div class="row tasks">
+        <article role="main">
+			<div class="padded col-md-10">
 
-<%= render 'form' %>
+				<h1>Editing note</h1>
 
-<%= link_to 'Show', @note %> |
-<%= link_to 'Back', notes_path %>
+				<%= render 'form' %>
+
+				<%= link_to notes_path, class: 'icon-font' do %> &#59229; <span>Back to notes</span><% end %>
+
+			</div>
+     	</div>
+  	</article>
+</div>
