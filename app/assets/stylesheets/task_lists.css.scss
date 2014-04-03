@@ -39,7 +39,10 @@ body.task_lists-index {
     border-radius: 3px;
     word-wrap:break-word;
   }
- 
+  .padded.activity { 
+    background-color: #dfddde;
+    border:none;
+  }
   ul li {
     list-style: none;
     margin-right: 20px;
