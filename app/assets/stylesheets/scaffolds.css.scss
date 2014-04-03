@@ -158,6 +158,14 @@ input[type="submit"], .login_btn {
 .count {
   font-weight: 700;
 }
+textarea, input[type="text"] {  
+  overflow:hidden;
+  padding:10px;
+  font-size:14px;
+  border:1px solid $purple;
+}
+
+textarea {height:300px;}
 
 /*Scaffold*/
 
