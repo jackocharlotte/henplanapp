@@ -2,13 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/*variable*/
 $pink: #fd75a2;
 $pink-dark: #a63c5f;
 $very-dark: #3a2d31;
 $purple: #7f5060;
 
+/*mixin*/
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
 body.homes-index {
-    h3 {color:$purple;}
+    h3 {color:$very-dark;}
+    background: url(image_path('bg-multi.jpg')) repeat;
 }
 
 /*DASHBOARD*/
@@ -19,30 +29,26 @@ ul.dashboard {
     float:left;
     width:45%;
     margin:1.5% 3% 1.5% 0%;
-    /*background-color: #282828;*/
     text-align: center;
     font-size: 30px;
-    background-color:#fff;
-    border: 2px solid $purple;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
+    background-color:$pink-dark;
+    /*border: 2px solid $purple;*/
+    @include border-radius(3px); 
     a {
       text-decoration: none;
-      color:$pink-dark;
+      color:#fff;
       padding:30px 0 25px 0;
       &:hover {color:#fff;}
     }
     span {
       display: block;
-      color:$pink-dark;
+      color:#fff;
       font-size:20px;
-      margin-top:15px;
+      /*margin-top:15px;*/
     }
     &:hover {
       background-color: $very-dark;
       span {color:#fff;}
-      border: 2px solid $very-dark;
     }
   }
 }
@@ -50,25 +56,25 @@ ul.dashboard {
 .event_details {
   .padded {
     background-color: #fff;
-    padding:20px;
-    margin-top:20px;
+    padding:5px 20px 10px 20px;
+    margin-top:18px;
+    @include border-radius(2px); 
+    border:2px solid $purple;
   }
   label {margin:10px 0 0px 0;}
-  input, textarea {
-    background-color: #e6e4e5;
-    border:none;
-  }
+
   input[type="text"] {
     padding:5px;
     width:100%;
-    border:none;
   }
   input[type="date"] {
     padding-left:10px;
+    border:1px solid $purple;
+    width:100%;
   }
   textarea {
     width:100%;
-    height:33px;
+    height:65px;
     padding:5px;
   }
 }

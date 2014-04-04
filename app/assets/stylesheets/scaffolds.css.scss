@@ -110,6 +110,16 @@ nav{
   
 }
 
+ul.menu {
+  position:absolute;
+  top:150px;
+  left:20px;
+  li {
+    text-decoration: none;
+    list-style: none;
+  }
+}
+
 .btn-primary {
   background-color:$pink;
   border:none;

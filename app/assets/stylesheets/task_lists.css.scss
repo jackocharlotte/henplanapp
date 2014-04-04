@@ -7,8 +7,16 @@ $pink-dark: #a63c5f;
 $very-dark: #3a2d31;
 $purple: #7f5060;
 
-body.task_lists-index {
+body.task_lists-index, body.task_lists-new, body.task_lists-edit {
   background: url(image_path('bg-6-full.jpg')) repeat; 
+}
+
+body.task_lists-new, body.attendees-new, body.task_lists-edit, body.attendees-edit, body.task_items-edit, body.task_items-new, body.notes-new, body.notes-edit  {
+  .padded {
+    margin-top:20px;
+    border:none;
+  }
+  label {margin-top:10px;}
 }
 
 .tasklists-layout {margin-left: -12px;}
