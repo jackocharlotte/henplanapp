@@ -35,7 +35,7 @@
                 <% @task_lists.each do |task_list| %>
                 
                     <div class="tasks col-xs-12 col-sm-6" id="<%= dom_id(task_list) %>">
-                        <div class="padded">
+                        <div class="panel panel-default padded">
                            <h2><%= task_list.title %></h2>
                            
                            <p class="created">Assigned to: <%= User.find(task_list.user_id).username %> <br/> Created: <%= task_list.created_at.strftime("%d %b. %Y") %></p>
@@ -80,7 +80,7 @@
 
           <!-- Static content for prototype to demonstrate the display of entire notes-->
           <div class="tasks col-xs-12 col-sm-12 col-md-4">
-              <div class="padded activity">
+              <div class="panel panel-default padded activity">
                 <h4>Recent Activity</h4>
                 <hr>
                 <img src="http://lorempixel.com/g/50/50">
