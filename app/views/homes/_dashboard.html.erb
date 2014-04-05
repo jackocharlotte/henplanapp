@@ -4,7 +4,7 @@
           <div class="col-md-12">
               <div class="row">
                   <div class="col-xs-12 col-sm-12 col-md-12">
-                     <h1><span class="icon-font">&#8962;</span>Home</h1>
+                     <h1><span class="icon-font">&#8962;</span>Dashboard</h1>
                        
                   </div> 
               </div>
@@ -15,70 +15,183 @@
 
 <div class="container">
 	<div class="row">
+		<article role="main">
+			<div class="col-xs-12 col-sm-12 col-md-12">
+				...
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6">
+				<div class="padded group">
+					<p class="head"><span class="icon-font">&#128101;</span> Group Members </p>
+					<%= link_to image_tag("members/m1.jpg", :alt => "member", size: "99"), root_path %>
+					<%= link_to image_tag("members/m2.jpg", :alt => "member", size: "99"), root_path %>
+					<%= link_to image_tag("members/m3.jpg", :alt => "member", size: "99"), root_path %>
+					<%= link_to image_tag("members/m4.jpg", :alt => "member", size: "99"), root_path %>
+					<%= link_to image_tag("members/m5.jpg", :alt => "member", size: "99"), root_path %>
+				</div>
+			</div>
+
+
+			<div class="col-xs-12 col-sm-6 col-md-6">
+				<div class="padded event">
+					<p class="head"><span class="icon-font">&#128197;</span>125 days until Emma's hen party!</p>
+					<div class="event_details">
+						
+						<p><span class="date">28th</span> <br/><span class="month">July 2014</span></p>
+					</div>
+					<div class="event_details">
+						<p class="address">Address<br/>6 South Street, Bournemouth, BH71 7HS</p>
+						<input type="submit" class="btn btn-primary" value="Update">	
+					</div>
+					<div class="event_details">
+						<p class=""></p>									
+						
+					</div>
+
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-3 col-md-3">
+				<div class="padded">
+					<p class="head"> <span class="icon-font">&#128101;</span>Attendees </p>
+				 	<p class="total">10 <span class="caption">Total guests</span></p>
+				 	<%= link_to attendees_path, class: 'icon-font' do %>
+						<span>Go to Attendees</span>
+						&#59230;
+					<% end %>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-3 col-md-3">
+				<div class="padded">
+				<p class="head"><span class=" icon-font">&#10062;</span> Budgets </p>
+					<div class=" budgets"><%= image_tag("budgets.jpg") %></div>
+					<%= link_to task_lists_path, class: 'icon-font' do %>
+						<span>Go to Budgets</span>
+						&#59230;
+					<% end %>
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-sm-6 col-md-6">
+				<div class="padded">
+					<p class="head"><span class="icon-font">&#128278;</span> Resources &amp; Suppliers - My Bookmarks </p>
+					<p class="bg-info">Hen sash and L plates | £7.99
+						<button type="button" class="close" aria-hidden="true">&times;</button>
+						<span class="icon-font">&#59146;</span>
+					</p>
+					<p class="bg-warning">10 best cocktail recipes. 01/04/2014
+						<button type="button" class="close" aria-hidden="true">&times;</button>
+						<span class="icon-font">&#59146;</span>
+					</p>
+					<p class="bg-info">Mr &amp; Mrs game template. 14/03/2014
+						<button type="button" class="close" aria-hidden="true">&times;</button>
+						<span class="icon-font">&#59146;</span>
+					</p>
+					<%= link_to task_lists_path, class: 'icon-font' do %>
+						<span>Go to Resources &amp; Suppliers</span>
+						&#59230;
+					<% end %>
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-sm-6 col-md-6">
+				<div class="padded" style="padding:10px; background:#fff; overflow:hidden; margin-top:10px; margin-bottom:10px;  ">
+				<p> Tasks </p>
+				<hr>
+                <img src="http://lorempixel.com/g/50/50">
+                <p>Lottejackson added 5 tasks to <a href="">Music</a> <span>2 hours ago. </span> </p>
+                <hr>
+                <img src="http://lorempixel.com/g/50/50">
+                <p>Kirsten Chapman Smith completed 3 tasks in <a href="">Shopping list</a> <span>12 hours ago. </span></p>
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-sm-6 col-md-6">
+				<div class="padded" style="padding:10px; background:#fff; overflow:hidden; margin-top:10px; margin-bottom:10px;  ">
+				<p> Feed </p>
+				<hr>
+                <img src="http://lorempixel.com/g/50/50">
+                <p>Lottejackson added 5 tasks to <a href="">Music</a> <span>2 hours ago. </span> </p>
+                <hr>
+                <img src="http://lorempixel.com/g/50/50">
+                <p>Kirsten Chapman Smith completed 3 tasks in <a href="">Shopping list</a> <span>12 hours ago. </span></p>
+				</div>
+			</div>
+		</article>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<article role="main">
 	<!--<div class="col-md-12">
 		<div class="instructions">
 			<p>Some welcome instructions etc</p>
 		</div>
 	</div>-->
-	  <div class="col-xs-12 col-sm-7 col-md-7">
-	  	<h3>Dashboard</h3>
-			<ul class="dashboard">
-				<li>
-					<%= link_to task_lists_path, class: 'icon-font' do %>
-					&#10003;
-					<span>Tasks</span>
-					<% end %>
-				</li>
-				<li>
-					<%= link_to attendees_path, class: 'icon-font' do %>
-					&#128101;
-					<span>Attendees</span>
-					<% end %>
-				</li>
-				<li>
-					<%= link_to task_lists_path, class: 'icon-font' do %>
-					&#10062;
-					<span>Budgets</span>
-					<% end %>
-				</li>
-				<li>
-					<%= link_to task_lists_path, class: 'icon-font' do %>
-					&#9993;
-					<span>Discussions</span>
-					<% end %>
-				</li>
-				<li>
-					<%= link_to notes_path, class: 'icon-font' do %>
-					&#128213;
-					<span>Notes</span>
-					<% end %>
-				</li>
-				<li>
-					<%= link_to task_lists_path, class: 'icon-font' do %>
-					&#59190;
-					<span>Extras</span>
-					<% end %>
-				</li>
-			</ul>
-	  </div>
-	  <div class="col-xs-12 col-sm-5 col-md-5 event_details">
-	  	<h3>Event details</h3>
-	  	<div class="padded">
-		  	
-		  	<p>Store your hen party details and share them with friends.</p>
-		  	
-		 	<form>
-			  <label for="hen_name">Hen's name</label><input type="text" id="hen_name"><br/>
-			  <label for="my_date">Date</label> <br/><input type="date" id="my_date"><br/>
-			  <label for="accomm">Accommodation address</label><textarea id="accomm"></textarea><br/>
-			  <input type="submit" value="Save">
-			</form>
+			  <div class="col-xs-12 col-sm-6 col-md-6">
+					<ul class="dashboard">
+						<li>
+							<%= link_to task_lists_path, class: 'icon-font' do %>
+							&#10003;
+							<span>Tasks</span>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to attendees_path, class: 'icon-font' do %>
+							&#128101;
+							<span>Attendees</span>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to task_lists_path, class: 'icon-font' do %>
+							&#10062;
+							<span>Budgets</span>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to task_lists_path, class: 'icon-font' do %>
+							&#9993;
+							<span>Discussions</span>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to notes_path, class: 'icon-font' do %>
+							&#128213;
+							<span>Notes</span>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to task_lists_path, class: 'icon-font' do %>
+							&#59190;
+							<span>Extras</span>
+							<% end %>
+						</li>
+					</ul>
+			  </div>
+			  <div class="col-xs-12 col-sm-4 col-md-4 event_details">
+			  	<h3>Event details</h3>
+			  	<div class="padded">	  	
+			
+				 	<form>
+					  <label for="hen_name">Hen's name</label><input type="text" id="hen_name"><br/>
+					  <label for="my_date">Date</label> <br/><input type="date" id="my_date"><br/>
+					  <label for="accomm">Accommodation address</label><br/><textarea id="accomm"></textarea><br/>
+					  <input type="submit" value="Save">
+					</form>
 
+				</div>
+				<h3>Members</h3>
+			</div>
 
-		</div>
-
-			 <h4>Recent activity</h4>
-			 <h4>Group members</h4>
-	  </div>
+			<div class="col-xs-12 col-sm-2 col-md-2 event_details">
+			  	<h3>Activity</h3>
+			  	<hr>
+                <img src="http://lorempixel.com/g/50/50">
+                <p>Lottejackson added 5 tasks to <a href="">Music</a> <span>2 hours ago. </span> </p>
+                <hr>
+                <img src="http://lorempixel.com/g/50/50">
+                <p>Kirsten Chapman Smith completed 3 tasks in <a href="">Shopping list</a> <span>12 hours ago. </span></p>
+			  	
+			</div>
+		</article>
 	</div>
 </div>

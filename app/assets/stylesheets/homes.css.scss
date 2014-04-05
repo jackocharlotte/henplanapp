@@ -18,7 +18,83 @@ $purple: #7f5060;
 
 body.homes-index {
     h3 {color:$very-dark;}
-    background: url(image_path('bg-multi.jpg')) repeat;
+    /*background: url(image_path('bg-multi.jpg')) repeat;*/
+    background-color:#ebe8e9;
+    
+    .padded {
+      padding:15px; 
+      background:#fff; 
+      overflow:hidden; 
+      margin-top:10px; 
+      margin-bottom:15px;
+      @include border-radius(3px); 
+      .head {
+        font-size: 18px;
+        color:$purple;
+      }
+      .icon-font {margin-right:5px;}
+      span.caption {
+        text-align: center; 
+        font-size: 12px; 
+        font-weight: 300;
+        margin:0 0 14px -5px; 
+        display: block;
+      }
+    }
+    .group {
+      img {
+        margin-left: 0.5%;
+        width: 18.5%;
+        height: 68%;
+      }
+    }
+}
+
+.event_details {
+  float:left;
+  width:30%;
+  margin-right: 3%;
+  .date {
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 49px;         
+  }
+  span.month {
+    font-size: 29px;
+    line-height: 45px; 
+  }
+  .address {font-size: 16px;}
+  .countdown {
+    font-weight: 700;
+    color:$purple;
+  }
+  p {font-size: 20px; margin:0;}
+  .btn {
+    position: absolute;
+    bottom:20px;
+    right:30px;
+  }
+}
+.total {
+  text-align: center;
+  font-size: 70px;
+  font-weight: 700;
+  color:$purple;
+  background-color: #e0d3d7;
+  padding:2px;
+}
+.budgets {text-align: center;}
+.bg-info,  .bg-warning {
+  padding:10px;
+  font-size: 14px;
+  span {
+    float:right;
+    opacity: .5;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top:-5px;
+  }
+  button { font-size: 16px; margin:0 10px;}
 }
 
 /*DASHBOARD*/
