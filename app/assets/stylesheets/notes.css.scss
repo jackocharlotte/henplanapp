@@ -25,13 +25,7 @@ body.notes-index, body.notes-new, body.notes-edit {
     padding:5px;
   }
   .padded {
-    background:#fff;
-    padding:1em 1.5em;
     border: 2px solid #d1b8c0;
-    word-wrap:break-word;
-        -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
     cursor:pointer;
   }
   .date {color:$purple; font-weight: 500;}
@@ -48,7 +42,7 @@ body.notes-index, body.notes-new, body.notes-edit {
   .created {font-size: 14px;}
 }
 
-.notes.first { 
+.notes.first .padded { 
 	border:3px solid $purple; 
 	-webkit-border-radius: 3px;
     -moz-border-radius: 3px;

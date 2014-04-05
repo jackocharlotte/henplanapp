@@ -141,7 +141,12 @@ a.sub-menu, .sub-menu a {
 }
 .sub-menu .left {float:left;}
 
-/*Submit buttons*/
+.padded {
+  padding:15px;
+  word-wrap:break-word;
+}
+
+/*Submit buttons
 input[type="submit"], .login_btn {
   background-color: $pink;
   border:none;
@@ -154,7 +159,7 @@ input[type="submit"], .login_btn {
   -moz-border-radius: 3px;
   border-radius: 3px;
   margin:10px 0;
-}
+}*/
 .btn.login {
   float:right;
   margin-top:7px;

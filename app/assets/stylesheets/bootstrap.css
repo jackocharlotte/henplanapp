@@ -3483,7 +3483,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   max-width: none;
 }
 .nav-tabs {
-  border-bottom: 1px solid #ddd;
+
 }
 .nav-tabs > li {
   float: left;
@@ -3503,7 +3503,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li.active > a:focus {
   color: #555;
   cursor: default;
-  background-color: #fff;
+  background-color: #e2dfe0;
   border: 1px solid #ddd;
   border-bottom-color: transparent;
 }
@@ -4760,6 +4760,7 @@ a.list-group-item-danger.active:focus {
   border-bottom: 1px solid transparent;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
+  margin-bottom: 0;
 }
 .panel-heading > .dropdown .dropdown-toggle {
   color: inherit;
@@ -5028,7 +5029,7 @@ a.list-group-item-danger.active:focus {
 .well {
   min-height: 20px;
   padding: 19px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   background-color: #f5f5f5;
   border: 1px solid #e3e3e3;
   border-radius: 4px;

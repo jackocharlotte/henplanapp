@@ -33,7 +33,7 @@
             <!--Static demo content for prototype-->
             <div class="col-xs-12 col-sm-6 col-md-6">
                 <div class="notes first">
-                    <div class="padded">
+                    <div class="panel padded">
                        <h2>Accommodation in Bournemouth</h2>
                        
                        <p class="created">By: Lottejackson | 27th March. 2014</p>
@@ -61,7 +61,7 @@
                   <% @notes.each do |note| %>
                   
                       <div class="notes" id="<%= dom_id(note) %>">
-                          <div class="padded">
+                          <div class="panel padded">
                              <h2><%= note.title %></h2>
                              
                              <p class="created">By: Username | <%= note.created_at.strftime("%d %b. %Y") %></p>
@@ -95,7 +95,7 @@
             
           <!-- Static content for prototype to demonstrate the display of recent activity-->
           <div class="notes col-xs-12 col-sm-6 col-md-6">
-              <div class="padded current">
+              <div class="panel padded current">
                 <p><span class="date">27th March. 2014</span>  |  By: Lottejackson</p>
                 <hr>
                 <p class="count">Accommodation in Bournemouth</p>

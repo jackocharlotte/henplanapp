@@ -15,106 +15,139 @@
 
 <div class="container">
 	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12">
+			<ul class="nav nav-tabs">
+			  <li class="active"><a href="#">Emma's Hen Party</a></li>
+			  <li><a href="#">My Events</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="wrapper">
+	<div class="container">
+	<div class="row">
 		<article role="main">
-			<div class="col-xs-12 col-sm-12 col-md-12">
-				...
-			</div>
+	
 			<div class="col-xs-12 col-sm-6 col-md-6">
-				<div class="padded group">
-					<p class="head"><span class="icon-font">&#128101;</span> Group Members </p>
-					<%= link_to image_tag("members/m1.jpg", :alt => "member", size: "99"), root_path %>
-					<%= link_to image_tag("members/m2.jpg", :alt => "member", size: "99"), root_path %>
-					<%= link_to image_tag("members/m3.jpg", :alt => "member", size: "99"), root_path %>
-					<%= link_to image_tag("members/m4.jpg", :alt => "member", size: "99"), root_path %>
-					<%= link_to image_tag("members/m5.jpg", :alt => "member", size: "99"), root_path %>
+				<div class="panel panel-default">
+				  <p class="panel-heading head"><span class="icon-font">&#128101;</span> Group Members</p>
+				  <div class="panel-body">
+					<%= link_to image_tag("members/m1.jpg", :alt => "member", size: "98"), root_path %>
+					<%= link_to image_tag("members/m2.jpg", :alt => "member", size: "98"), root_path %>
+					<%= link_to image_tag("members/m3.jpg", :alt => "member", size: "98"), root_path %>
+					<%= link_to image_tag("members/m4.jpg", :alt => "member", size: "98"), root_path %>
+					<%= link_to image_tag("members/m5.jpg", :alt => "member", size: "98"), root_path %>
+				  </div>
 				</div>
 			</div>
 
 
 			<div class="col-xs-12 col-sm-6 col-md-6">
-				<div class="padded event">
-					<p class="head"><span class="icon-font">&#128197;</span>125 days until Emma's hen party!</p>
-					<div class="event_details">
+				<div class="panel panel-default">
+				  <p class="panel-heading head"><span class="icon-font">&#128197;</span>125 days until Emma's hen party! </p>
+				  <div class="panel-body">
+				    <div class="event_details">
 						
 						<p><span class="date">28th</span> <br/><span class="month">July 2014</span></p>
 					</div>
 					<div class="event_details">
 						<p class="address">Address<br/>6 South Street, Bournemouth, BH71 7HS</p>
-						<input type="submit" class="btn btn-primary" value="Update">	
+						<%= link_to root_path, class: 'btn btn-primary' do %>Update<% end %>
 					</div>
 					<div class="event_details">
 						<p class=""></p>									
 						
 					</div>
-
+				  </div>
 				</div>
 			</div>
+
+
+
 			<div class="col-xs-12 col-sm-3 col-md-3">
-				<div class="padded">
-					<p class="head"> <span class="icon-font">&#128101;</span>Attendees </p>
-				 	<p class="total">10 <span class="caption">Total guests</span></p>
+				<div class="panel panel-default">
+				  <p class="panel-heading head"><span class="icon-font">&#128101;</span>Attendees </p>
+				  <div class="panel-body">
+				    <p class="total">10 <span class="caption">Total guests</span></p>
 				 	<%= link_to attendees_path, class: 'icon-font' do %>
-						<span>Go to Attendees</span>
+						<span>View Attendees</span>
 						&#59230;
 					<% end %>
+				  </div>
 				</div>
 			</div>
+
+
+		
 			<div class="col-xs-12 col-sm-3 col-md-3">
-				<div class="padded">
-				<p class="head"><span class=" icon-font">&#10062;</span> Budgets </p>
-					<div class=" budgets"><%= image_tag("budgets.jpg") %></div>
-					<%= link_to task_lists_path, class: 'icon-font' do %>
-						<span>Go to Budgets</span>
-						&#59230;
-					<% end %>
+				<div class="panel panel-default">
+				  <p class="panel-heading head"><span class=" icon-font">&#10062;</span> Budgets </p>
+				  <div class="panel-body">
+				    <div class=" budgets"><%= image_tag("budgets.jpg") %></div>
+						<%= link_to task_lists_path, class: 'icon-font' do %>
+							<span>View Budgets</span>
+							&#59230;
+						<% end %>
+				  </div>
+				</div>
+			</div>
+
+
+			<div class="col-xs-12 col-sm-6 col-md-6">
+				<div class="panel panel-default">
+				    <p class="panel-heading head"><span class="icon-font">&#128278;</span> Resources &amp; Suppliers - My Bookmarks </p>
+				    <div class="panel-body">
+					  	<p class="bg-info">Hen sash and L plates | £7.99
+							<button type="button" class="close" aria-hidden="true">&times;</button>
+							<span class="icon-font">&#59146;</span>
+						</p>
+						<p class="bg-warning">10 best cocktail recipes. 01/04/2014
+							<button type="button" class="close" aria-hidden="true">&times;</button>
+							<span class="icon-font">&#59146;</span>
+						</p>
+						<p class="bg-info">Mr &amp; Mrs game template. 14/03/2014
+							<button type="button" class="close" aria-hidden="true">&times;</button>
+							<span class="icon-font">&#59146;</span>
+						</p>
+						<%= link_to task_lists_path, class: 'icon-font' do %>
+							<span>All Resources &amp; Suppliers</span>
+							&#59230;
+						<% end %>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="col-xs-12 col-sm-6 col-md-6">
+				<div class="panel panel-default">
+				  <div class="panel-heading">
+				    <p class="panel-title head"><span class="icon-font">&#10003;</span>Task Lists</p>
+				  </div>
+				  <div class="panel-body">
+				    <div class="well well-sm">...<button type="button" class="close" aria-hidden="true">&times;</button></div>
+				    <div class="well well-sm">...<button type="button" class="close" aria-hidden="true">&times;</button></div>
+				    <div class="well well-sm">...<button type="button" class="close" aria-hidden="true">&times;</button></div>
+				  </div>
 				</div>
 			</div>
 
 			<div class="col-xs-12 col-sm-6 col-md-6">
-				<div class="padded">
-					<p class="head"><span class="icon-font">&#128278;</span> Resources &amp; Suppliers - My Bookmarks </p>
-					<p class="bg-info">Hen sash and L plates | £7.99
-						<button type="button" class="close" aria-hidden="true">&times;</button>
-						<span class="icon-font">&#59146;</span>
-					</p>
-					<p class="bg-warning">10 best cocktail recipes. 01/04/2014
-						<button type="button" class="close" aria-hidden="true">&times;</button>
-						<span class="icon-font">&#59146;</span>
-					</p>
-					<p class="bg-info">Mr &amp; Mrs game template. 14/03/2014
-						<button type="button" class="close" aria-hidden="true">&times;</button>
-						<span class="icon-font">&#59146;</span>
-					</p>
-					<%= link_to task_lists_path, class: 'icon-font' do %>
-						<span>Go to Resources &amp; Suppliers</span>
-						&#59230;
-					<% end %>
+				<div class="panel panel-default">
+				  <div class="panel-heading">
+				    <p class="panel-title head"><span class="icon-font">&#10003;</span>Feed </p>
+				  </div>
+				  <div class="panel-body">
+	                <img src="http://lorempixel.com/g/50/50">
+	                <p>Lottejackson added 5 tasks to <a href="">Music</a> <span>2 hours ago. </span> </p>
+	                <hr>
+	                <img src="http://lorempixel.com/g/50/50">
+	                <p>Kirsten Chapman Smith completed 3 tasks in <a href="">Shopping list</a> <span>12 hours ago. </span></p>
+				  </div>
 				</div>
 			</div>
 
-			<div class="col-xs-12 col-sm-6 col-md-6">
-				<div class="padded" style="padding:10px; background:#fff; overflow:hidden; margin-top:10px; margin-bottom:10px;  ">
-				<p> Tasks </p>
-				<hr>
-                <img src="http://lorempixel.com/g/50/50">
-                <p>Lottejackson added 5 tasks to <a href="">Music</a> <span>2 hours ago. </span> </p>
-                <hr>
-                <img src="http://lorempixel.com/g/50/50">
-                <p>Kirsten Chapman Smith completed 3 tasks in <a href="">Shopping list</a> <span>12 hours ago. </span></p>
-				</div>
-			</div>
 
-			<div class="col-xs-12 col-sm-6 col-md-6">
-				<div class="padded" style="padding:10px; background:#fff; overflow:hidden; margin-top:10px; margin-bottom:10px;  ">
-				<p> Feed </p>
-				<hr>
-                <img src="http://lorempixel.com/g/50/50">
-                <p>Lottejackson added 5 tasks to <a href="">Music</a> <span>2 hours ago. </span> </p>
-                <hr>
-                <img src="http://lorempixel.com/g/50/50">
-                <p>Kirsten Chapman Smith completed 3 tasks in <a href="">Shopping list</a> <span>12 hours ago. </span></p>
-				</div>
-			</div>
 		</article>
 	</div>
 </div>
@@ -194,4 +227,7 @@
 			</div>
 		</article>
 	</div>
+</div>
+
+
 </div>

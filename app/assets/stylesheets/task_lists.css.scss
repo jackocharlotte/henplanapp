@@ -39,12 +39,8 @@ body.task_lists-new, body.attendees-new, body.task_lists-edit, body.attendees-ed
     padding:10px;
   }
   .padded {
-    /*background:#fff;*/
-    padding:1em 1.5em;
+
     border: 2px solid #d1b8c0;
-   /* -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;*/
     word-wrap:break-word;
   }
   .padded.activity { 
