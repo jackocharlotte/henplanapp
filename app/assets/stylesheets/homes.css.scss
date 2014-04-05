@@ -19,7 +19,6 @@ $purple: #7f5060;
 body.homes-index {
     h3 {color:$very-dark;}
     /*background: url(image_path('bg-multi.jpg')) repeat;*/
-    background-color:#ebe8e9;
     
     .padded {
       padding:15px; 
@@ -50,6 +49,11 @@ body.homes-index {
     }
 }
 
+.wrapper {
+  background:#dad9d9;
+  .row {margin-top:20px;}
+}
+
 .event_details {
   float:left;
   width:30%;
@@ -71,7 +75,7 @@ body.homes-index {
   p {font-size: 20px; margin:0;}
   .btn {
     position: absolute;
-    bottom:20px;
+    bottom:30px;
     right:30px;
   }
 }
@@ -96,6 +100,8 @@ body.homes-index {
   }
   button { font-size: 16px; margin:0 10px;}
 }
+
+.new-event {float:right;}
 
 /*DASHBOARD*/
 ul.dashboard {
