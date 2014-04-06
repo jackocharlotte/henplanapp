@@ -1,3 +1,5 @@
+<% provide(:title, 'Dashboard') %>
+
 <div class="lw-header">
   <div class="container">
       <div class="row">
@@ -125,9 +127,8 @@
 				    <p class="panel-title head"><span class="icon-font">&#10003;</span>Task Lists</p>
 				  </div>
 				  <div class="panel-body">
-				    <div class="well well-sm">...<button type="button" class="close" aria-hidden="true">&times;</button></div>
-				    <div class="well well-sm">...<button type="button" class="close" aria-hidden="true">&times;</button></div>
-				    <div class="well well-sm">...<button type="button" class="close" aria-hidden="true">&times;</button></div>
+				    <div class="well well-sm"><%= taskTitles %><button type="button" class="close" aria-hidden="true">&times;</button></div>
+				    
 				  </div>
 				</div>
 			</div>
