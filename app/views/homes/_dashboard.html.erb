@@ -32,14 +32,15 @@
 		<article role="main">
 	
 			<div class="col-xs-12 col-sm-6 col-md-6">
-				<div class="panel panel-default">
+				<div class="panel panel-default  group">
 				  <p class="panel-heading head"><span class="icon-font">&#128101;</span> Group Members</p>
 				  <div class="panel-body">
-					<%= link_to image_tag("members/m1.jpg", :alt => "member", size: "98"), root_path %>
-					<%= link_to image_tag("members/m2.jpg", :alt => "member", size: "98"), root_path %>
-					<%= link_to image_tag("members/m3.jpg", :alt => "member", size: "98"), root_path %>
-					<%= link_to image_tag("members/m4.jpg", :alt => "member", size: "98"), root_path %>
-					<%= link_to image_tag("members/m5.jpg", :alt => "member", size: "98"), root_path %>
+					<%= link_to image_tag("members/m1.jpg", :alt => "member", size: "83"), root_path %>
+					<%= link_to image_tag("members/m2.jpg", :alt => "member", size: "83"), root_path %>
+					<%= link_to image_tag("members/m3.jpg", :alt => "member", size: "83"), root_path %>
+					<%= link_to image_tag("members/m4.jpg", :alt => "member", size: "83"), root_path %>
+					<%= link_to image_tag("members/m5.jpg", :alt => "member", size: "83"), root_path %>
+					<%= link_to root_path, class: 'icon-font btn btn-primary' do %>&#59136;<% end %>
 				  </div>
 				</div>
 			</div>
@@ -123,27 +124,52 @@
 
 			<div class="col-xs-12 col-sm-6 col-md-6">
 				<div class="panel panel-default">
-				  <div class="panel-heading">
-				    <p class="panel-title head"><span class="icon-font">&#10003;</span>Task Lists</p>
-				  </div>
-				  <div class="panel-body">
-				    <div class="well well-sm"><%= taskTitles %><button type="button" class="close" aria-hidden="true">&times;</button></div>
-				    
-				  </div>
+					 <div class="panel-heading">
+					    <p class="panel-title head"><span class="icon-font">&#10003;</span>Task Lists</p>
+					  </div>
+					  <div class="panel-body">
+					    <% @task_lists.each do |task_list| %>
+						    <div class="well well-sm">
+						    	<%= task_list.title %><button type="button" class="close" aria-hidden="true">&times;</button>
+						    	<%= link_to task_list_task_items_path(task_list), class: 'icon-font view' do %>
+                                &#57349;
+                                <span>View tasks</span>
+                                <% end %>
+						    </div>
+					    <% end %>
+					     <%= link_to task_lists_path, class: 'icon-font' do %>
+							<span>All Task Lists</span>
+							&#59230;
+						<% end %>	
+					 </div> 
 				</div>
 			</div>
 
 			<div class="col-xs-12 col-sm-6 col-md-6">
 				<div class="panel panel-default">
 				  <div class="panel-heading">
-				    <p class="panel-title head"><span class="icon-font">&#10003;</span>Feed </p>
+				    <p class="panel-title head"><span class="icon-font">&#10003;</span>Activity </p>
 				  </div>
 				  <div class="panel-body">
-	                <img src="http://lorempixel.com/g/50/50">
-	                <p>Lottejackson added 5 tasks to <a href="">Music</a> <span>2 hours ago. </span> </p>
-	                <hr>
-	                <img src="http://lorempixel.com/g/50/50">
-	                <p>Kirsten Chapman Smith completed 3 tasks in <a href="">Shopping list</a> <span>12 hours ago. </span></p>
+	                <ul class="media-list">
+					  <li class="media">
+					    <a class="pull-left" href="#">
+					      <%=  image_tag("members/m3.jpg", :alt => "member", size: "60") %>
+					    </a>
+					    <div class="media-body">
+					      <p><a href="">Lottejackson</a> added 5 tasks to the <a href="">Music</a> task list. <br/><span class="date-small">2 hours ago. </span> </p>
+					    </div>
+					  </li>
+					   <li class="media">
+					    <a class="pull-left" href="#">
+					      <%=  image_tag("members/m1.jpg", :alt => "member", size: "60") %>
+					    </a>
+					    <div class="media-body">
+					      <p><a href="">Kirsten</a> added 2 items to the <a href="">Budget</a> list.<br/> <span class="date-small">2 hours ago. </span> </p>
+					    </div>
+					  </li>
+
+					</ul>
 				  </div>
 				</div>
 			</div>

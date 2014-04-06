@@ -18,7 +18,6 @@ $purple: #7f5060;
 
 body.homes-index {
     h3 {color:$very-dark;}
-    /*background: url(image_path('bg-multi.jpg')) repeat;*/
     
     .padded, .panel {
       overflow:hidden; 
@@ -38,11 +37,18 @@ body.homes-index {
       }
     }
     .group {
-      img {
-        margin-left: 0.5%;
-        width: 18.5%;
-        height: 68%;
+      .panel-body{ padding:22px 15px;}
+      .btn-primary {
+        width: 80px;
+        display: inline-block;
+        margin-left:0.5%;
+        padding: 24px;
+        font-size: 25px;
       }
+    }
+    .view  {
+      float:right; 
+      padding-right:10px;
     }
 }
 
@@ -97,6 +103,11 @@ body.homes-index {
     margin-top:-5px;
   }
   button { font-size: 16px; margin:0 10px;}
+}
+.media-list li {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e2dfe0;
+  .date-small {font-size: 12px;}
 }
 
 .new-event {float:right;}
