@@ -91,9 +91,16 @@ header{
 /* NAVIGATION */
 nav{
   margin-top: 7px;
-  li {
+  ul li {
+    padding:2px 0;
+    a {
+      color:$pink-dark;
+      font-size: 16px;
+    }
+  }
+  /*li {
     display:block;
-    float:right;
+    float:left;
     margin-left:5px;
   }
   a.login_btn { 
@@ -106,6 +113,10 @@ nav{
     margin-top:0px;
     float: right;
     padding:0;
+  }*/
+  .btn-group {
+    float:right;
+    .icon-font { margin-right:5px; }
   }
   
 }
