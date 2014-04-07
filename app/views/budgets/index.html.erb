@@ -1,31 +1,74 @@
-<h1>Listing budgets</h1>
+<% provide(:title, 'Budget List') %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Cost</th>
-      <th>Notes</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<div class="lw-header">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                     <h1><span class="icon-font">&#10062;</span>Budget List</h1>
+                       
+                  </div> 
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
 
-  <tbody>
-    <% @budgets.each do |budget| %>
-      <tr>
-        <td><%= budget.name %></td>
-        <td><%= budget.cost %></td>
-        <td><%= budget.notes %></td>
-        <td><%= link_to 'Show', budget %></td>
-        <td><%= link_to 'Edit', edit_budget_path(budget) %></td>
-        <td><%= link_to 'Destroy', budget, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="container">
+    <div class="row">
+        <article role="main">
 
-<br>
+          <div class="col-md-12">
+              <div class="row">
+                 <div class="col-xs-12 col-sm-12 col-md-12 sub-menu">
+                     <%= link_to root_path, class: 'icon-font' do %> &#59229; <span>Back to Dashboard</span>
+                     <% end %>
 
-<%= link_to 'New Budget', new_budget_path %>
+                     <%= link_to new_budget_path, class: 'icon-font left' do %> &#8862; <span>New Item</span>
+                     <% end %>  
+
+                </div> 
+              </div> 
+        
+          <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th width="30%">Name</th>
+                    <th width="20%">Cost</th>
+                    <th width="50%">Notes</th>
+                    <th class="functions" width="25%">Functions</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <% @budgets.each do |budget| %>
+                    <tr>
+                      <td><%= budget.name %></td>
+                      <td>£<%= budget.cost %></td>
+                      <td><%= budget.notes %></td>
+
+                      <td class="functions">
+                        <%= link_to edit_budget_path(budget), class: 'icon-font' do %> &#9998; <span>Edit</span>
+                        <% end %>
+
+                        <%= link_to budget, method: :delete, data: { confirm: 'Are you sure?' }, class: 'icon-font' do %> &#59177; 
+                        <span>Delete</span> 
+                        <% end %>
+                      </td>
+                    </tr>
+                  <% end %>
+                </tbody>
+            </table>
+          </div>
+
+            <ul class="sums">
+                  <li>Total spent = <span class="count"> £420</span> </li>
+              </ul>
+            
+          </div>
+
+        </article>
+    </div>
+</div>
