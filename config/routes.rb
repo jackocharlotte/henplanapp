@@ -1,5 +1,6 @@
 HenplanppV1::Application.routes.draw do
 
+  get "messages/index"
   get "my_events/index"
   get 'my_events', to: 'my_events#index'
   get "create_event/index"
