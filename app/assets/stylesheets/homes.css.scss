@@ -53,6 +53,7 @@ body.homes-index {
 
 .wrapper {
   background:#e2dfe0;
+  padding-bottom:30px; 
   .row {margin-top:15px;}
 }
 .nav-tabs {margin-top:15px;}
@@ -76,11 +77,12 @@ body.homes-index {
     color:$purple;
   }
   p {font-size: 20px; margin:0;}
-  .btn {
+  .btn, .email {
     position: absolute;
     bottom:30px;
     right:30px;
   }
+  .email {top:70px;}
 }
 .total {
   text-align: center;
@@ -159,6 +161,7 @@ body.homes-index {
       padding:8px;
       margin-top:10px;
       color:#fff;
+      font-weight: 700;
     }
     input[type="checkbox"] {
       width:20px;
