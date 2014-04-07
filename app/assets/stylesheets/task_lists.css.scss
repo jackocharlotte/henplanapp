@@ -8,7 +8,7 @@ $very-dark: #3a2d31;
 $purple: #7f5060;
 
 body.task_lists-index, body.task_lists-new, body.task_lists-edit {
-  background: url(image_path('bg-6-full.jpg')) repeat; 
+  background: url(image_path('light_grey.png')) repeat; 
 }
 
 body.task_lists-new, body.attendees-new, body.task_lists-edit, body.attendees-edit, body.task_items-edit, body.task_items-new, body.notes-new, body.notes-edit  {
@@ -40,7 +40,7 @@ body.task_lists-new, body.attendees-new, body.task_lists-edit, body.attendees-ed
   }
   .padded {
 
-    border: 2px solid #d1b8c0;
+    border: 1px solid #d1b8c0;
     word-wrap:break-word;
   }
   .padded.activity { 

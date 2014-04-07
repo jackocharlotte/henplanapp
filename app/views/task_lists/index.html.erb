@@ -82,23 +82,41 @@
 
           <!-- Static content for prototype to demonstrate the display of entire notes-->
           <div class="tasks col-xs-12 col-sm-12 col-md-4">
-              <div class="panel padded activity">
-                <h4>Recent Activity</h4>
-                <hr>
-                <img src="http://lorempixel.com/g/50/50">
-                <p>Lottejackson added 5 tasks to <a href="">Music</a> <span>2 hours ago. </span> </p>
-                <hr>
-                <img src="http://lorempixel.com/g/50/50">
-                <p>Kirsten Chapman Smith completed 3 tasks in <a href="">Shopping list</a> <span>12 hours ago. </span></p>
-                <hr>
-                <img src="http://lorempixel.com/g/50/50">
-                <p>Kirsten Chapman Smith created task list called <a href="">Shopping list</a> <span>3 days ago. </span></p>
-                <hr>
-                <img src="http://lorempixel.com/g/50/50">
-                <p>Lucy Jones-Wright completed the task <a href="">Confirm final numbers</a> in <a href="">Initial jobs</a> <span>5 days ago. </span></p>
-              
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <p class="panel-title head"><span class="icon-font">&#10078;</span>Activity </p>
+          </div>
+          <div class="panel-body">
+                  <ul class="media-list">
+            <li class="media">
+              <a class="pull-left" href="#">
+                <%=  image_tag("members/m3.jpg", :alt => "member", size: "60") %>
+              </a>
+              <div class="media-body">
+                <p><a href="">Lottejackson</a> added 5 tasks to the <a href="">Music</a> task list. <br/><span class="date-small">2 hours ago. </span> </p>
               </div>
-          </div><!--6-->
+            </li>
+             <li class="media">
+              <a class="pull-left" href="#">
+                <%=  image_tag("members/m1.jpg", :alt => "member", size: "60") %>
+              </a>
+              <div class="media-body">
+                <p><a href="">Kirsten</a> added 2 items to the <a href="">Budget</a> list.<br/> <span class="date-small">2 hours ago. </span> </p>
+              </div>
+            </li>
+             <li class="media">
+              <a class="pull-left" href="#">
+                <%=  image_tag("members/m1.jpg", :alt => "member", size: "60") %>
+              </a>
+              <div class="media-body">
+                <p><a href="">Kirsten</a> completed 2 items on the <a href="">Initial jobs</a> task list.<br/> <span class="date-small">2 hours ago. </span> </p>
+              </div>
+            </li>
+
+          </ul>
+          </div>
+        </div>
+      </div>
               
         </article>
     </div>

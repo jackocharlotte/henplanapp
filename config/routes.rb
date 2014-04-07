@@ -1,5 +1,7 @@
 HenplanppV1::Application.routes.draw do
 
+  resources :budgets
+
   get "messages/index"
   get 'messages', to: 'messages#index'
   get "my_events/index"
