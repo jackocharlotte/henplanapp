@@ -1,2 +1,24 @@
-<h1>Create New Event</h1>
-<p></p>
+<% provide(:title, 'Create New Event') %>
+
+<div class="container">
+    <div class="row">
+        <article role="main">
+
+          		<div class="form  event_plan">
+					<h2>Create New Event</h2>
+					<p>Store details of the hen party here. Keep up to date with plans and share them with others.</p>
+		
+					<form>
+					  <label for="hen_name">Hen's name</label><input type="text" id="hen_name"><br/>
+					  <label for="my_date">Start date of hen party</label> <br/><input type="date" id="my_date"><br/>
+					  <label for="accomm">Accommodation address</label><br/><textarea id="accomm"></textarea><br/>
+					  <%= link_to "Save", root_path, class: "btn btn-primary" %>
+					</form>
+
+					
+				</div>
+
+		</article>
+	</div>
+</div>
+

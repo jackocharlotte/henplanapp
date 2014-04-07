@@ -111,22 +111,7 @@ body.homes-index {
 
 .new-event {float:right;}
 
-
-/*TO GO*/
-.event_details {
-  .padded {
-    background-color: #fff;
-    padding:5px 20px 10px 20px;
-    margin-top:18px;
-    @include border-radius(2px); 
-    border:2px solid $purple;
-  }
-  label {margin:10px 0 0px 0;}
-
-  input[type="text"] {
-    padding:5px;
-    width:100%;
-  }
+.event_plan {
   input[type="date"] {
     padding-left:10px;
     border:1px solid $purple;
@@ -148,7 +133,7 @@ body.homes-index {
   font-weight: 300;
 }
 
-.sessions-new, .registrations-new, .passwords-new, .registrations-edit {
+.sessions-new, .registrations-new, .passwords-new, .registrations-edit, .create_event-index {
   background:$very-dark;
   .form {
     margin:10px auto 0 auto;
@@ -168,11 +153,12 @@ body.homes-index {
         color:#fff;
       }
     }
-    input[type="submit"] {
+    .btn-primary {
       width:45%;
       font-weight: 100;
       padding:8px;
       margin-top:10px;
+      color:#fff;
     }
     input[type="checkbox"] {
       width:20px;
