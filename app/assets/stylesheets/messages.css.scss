@@ -1,3 +1,30 @@
 // Place all the styles related to the messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$very-dark: #3a2d31;
+
+.new-ms {padding:0px 15px;}
+.messages {
+	margin-top:10px;
+	.functions {
+		font-size:14px;
+		float:right;
+		margin-right:10px;
+	}
+	.well-lg:hover {
+		background-color:#ccc;
+		cursor:pointer;
+	}
+	.well-lg {  border:none;}
+}
+
+.message-view {
+	margin-top:32px;
+	ul li {
+    list-style: none;
+    margin-right: 20px;
+    display: inline-block;
+    margin-top:10px;
+  }
+}

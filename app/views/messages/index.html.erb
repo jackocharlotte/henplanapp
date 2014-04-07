@@ -1,2 +1,138 @@
-<h1>Messages#index</h1>
-<p>Find me in app/views/messages/index.html.erb</p>
+<% provide(:title, 'Messages') %>
+
+<div class="lw-header">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                     <h1><span class="icon-font">&#9993;</span>Messages</h1>
+                       
+                  </div> 
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12">
+			<ul class="nav nav-tabs">
+			  <li><%= link_to "Emma's hen party", root_path %></li>
+			  <li><%= link_to "My Events", my_events_path %></li>
+			  <li class="active"><%= link_to messages_path do %>Messages<b> 1 new</b><% end %></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="wrapper">
+
+<div class="container">
+    <div class="row">
+        <article role="main">  
+            <!--Static demo content for prototype-->
+            <div class="col-xs-12 col-sm-5 col-md-5">
+             <%= link_to messages_path, class: 'icon-font new-ms' do %> &#8862; <span>New message</span><% end %>
+                <div class="panel panel-default messages">				  
+					  <div class="panel-body">
+				
+						    <div class="well well-lg">
+						    	Lottejackson
+						    	<%= link_to messages_path, class: 'icon-font functions' do %>
+			                      &#9998;
+			                      <span>Reply</span>
+			                    <% end %>
+						    	<%= link_to messages_path, class: 'icon-font functions' do %>
+			                      &#59177;
+			                      <span>Delete</span>
+			                    <% end %>
+						    </div>
+						     <div class="well well-lg">
+						    	Miss Bee
+						    	<%= link_to messages_path, class: 'icon-font functions' do %>
+			                      &#9998;
+			                      <span>Reply</span>
+			                     <% end %>	
+						    	<%= link_to messages_path, class: 'icon-font functions' do %>
+			                      &#59177;
+			                      <span>Delete</span>
+			                    <% end %>
+						    </div>
+						    <div class="well well-lg">
+						    	Miss Bee
+						    	<%= link_to messages_path, class: 'icon-font functions' do %>
+			                      &#9998;
+			                      <span>Reply</span>
+			                     <% end %> 	
+						    	<%= link_to messages_path, class: 'icon-font functions' do %>
+			                      &#59177;
+			                      <span>Delete</span>
+			                    <% end %>
+						    </div>
+						    <div class="well well-lg">
+						    	Lottejackson
+						    	<%= link_to messages_path, class: 'icon-font functions' do %>
+			                      &#9998;
+			                      <span>Reply</span>
+			                     <% end %> 	
+						    	<%= link_to messages_path, class: 'icon-font functions' do %>
+			                      &#59177;
+			                      <span>Delete</span>
+			                    <% end %>
+						    </div>
+		
+					 </div> 
+				</div>
+          </div> <!--5-->
+            
+          <!-- Static content for prototype to demonstrate the display of current message-->
+          <div class="message-view col-xs-12 col-sm-7 col-md-7">
+              <div class="panel padded current">
+                <p><span class="date">27th March. 2014</span>  |  By: Lottejackson</p>
+                <hr>
+                <p class="count">Accommodation in Bournemouth</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, recusandae, nihil! Explicabo, voluptas, dignissimos, dicta vero minima cum nesciunt sit quasi eveniet beatae iure mollitia doloribus esse molestias in ea rerum omnis vitae similique sint vel blanditiis atque debitis enim magnam consequatur maxime praesentium tenetur architecto rem?</p> 
+                <ul>                    
+                    <li>
+                      <%= link_to messages_path, class: 'icon-font' do %>
+                      &#9998;
+                      <span>Reply</span>
+                      <% end %>
+                    </li>
+                    <li>
+                      <%= link_to messages_path, class: 'icon-font' do %>
+                      &#59177;
+                      <span>Delete</span>
+                      <% end %>
+                    </li>
+                </ul>
+                <hr>
+
+                <p><span class="date">27th March. 2014</span>  |  By: Miss Bee</p>
+                <hr>
+                <p class="count">Reply to: Accommodation in Bournemouth</p>
+                <p>Sequi tenetur optio labore necessitatibus explicabo delectus voluptatibus. Est, labore aliquam eum voluptatibus error ipsum similique laboriosam sint distinctio id! Recusandae necessitatibus voluptas corporis repellat velit commodi fugit laudantium distinctio. Ad, quam, consequuntur, obcaecati, labore molestias saepe illo voluptate facilis sequi ut laboriosam cum officiis facere blanditiis tenetur voluptatum dignissimos atque fugit veniam.</p>
+                <ul>                    
+                    <li>
+                      <%= link_to messages_path, class: 'icon-font' do %>
+                      &#9998;
+                      <span>Reply</span>
+                      <% end %>
+                    </li>
+                    <li>
+                      <%= link_to messages_path, class: 'icon-font' do %>
+                      &#59177;
+                      <span>Delete</span>
+                      <% end %>
+                    </li>
+                </ul>
+              </div>
+          </div><!--7-->
+
+        </article>
+    </div>
+</div>
+
+</div>
