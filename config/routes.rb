@@ -1,5 +1,7 @@
 HenplanppV1::Application.routes.draw do
 
+  get "my_events/index"
+  get 'my_events', to: 'my_events#index'
   get "create_event/index"
   get 'create', to: 'create_event#index'
   

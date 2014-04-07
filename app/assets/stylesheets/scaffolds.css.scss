@@ -51,10 +51,7 @@ ul {padding:0;}
 /* HEADER */
 header{
   padding:6px 0;
-  /*border-top: 2px solid $pink;*/
   background: $pink-dark;
-  /*background-color: #df4b7c;*/
-  /*margin-bottom: 30px;*/
   p {
     margin-top:15px;
     display: block;
@@ -170,11 +167,11 @@ input[type="submit"], .login_btn {
   -moz-border-radius: 3px;
   border-radius: 3px;
   margin:10px 0;
-}*/
+}
 .btn.login {
   float:right;
   margin-top:7px;
-}
+}*/
 
 .no-items {
   clear:both;
@@ -191,6 +188,10 @@ textarea, input[type="text"] {
 } 
 
 textarea {height:300px;}
+
+article {margin-bottom:30px;}
+
+
 
 /*Scaffold*/
 

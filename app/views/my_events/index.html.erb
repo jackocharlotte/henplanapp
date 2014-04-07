@@ -1,0 +1,56 @@
+<% provide(:title, 'My Events') %>
+
+<div class="lw-header">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                     <h1><span class="icon-font">&#8962;</span>My Events</h1>
+                       
+                  </div> 
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12">
+			<ul class="nav nav-tabs">
+			  <li><%= link_to "Emma's hen party", root_path %></li>
+			  <li class="active"><%= link_to "My Events", my_events_path %></li>
+			  <li><a href="#">Messages <b>1 new</b></a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="wrapper">
+	<div class="container">
+	    <div class="row">
+	        <article role="main">
+				<div class="col-xs-12 col-sm-12 col-md-12 my-events">
+
+					<%= link_to create_path, class: 'btn btn-primary' do %>Create New Event<% end %>
+					
+
+					<div class="list-group">
+						  <%= link_to root_path, class: 'list-group-item active' do %>
+						    <h4 class="list-group-item-heading">Emma's hen party</h4>
+						    <p class="list-group-item-text">28th July 2014</p>
+						  <% end %>
+						   <%= link_to root_path, class: 'list-group-item' do %>
+						    <h4 class="list-group-item-heading">Kirsten Chapman's hen party</h4>
+						    <p class="list-group-item-text">12th September 2014</p>
+						  <% end %>
+
+					</div>
+
+				</div>
+	        </article>
+		</div>
+	</div>
+</div>
+
