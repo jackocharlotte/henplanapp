@@ -50,6 +50,14 @@ body.homes-index {
       padding-right:10px;
     }
 }
+.dash-img {
+  position: fixed;
+  z-index: -1;
+  width:100%;
+  @media (max-width: 768px) {
+      width:auto;
+    } 
+}
 
 .wrapper {
   background:#e2dfe0;
@@ -57,7 +65,10 @@ body.homes-index {
   .row {margin-top:15px;}
 }
 
-.nav-tabs {margin-top:45px;}
+.nav-tabs {
+  margin-top:70px;
+  a {background: #fff;}
+}
 
 .event_details {
   float:left;
@@ -124,10 +135,7 @@ body.homes-index {
   font-weight: 300;
 }
 
-.dash-img {
-  position: fixed;
-  z-index: -1;
-}
+
 
 .sessions-new, .registrations-new, .passwords-new, .registrations-edit, .create_event-index {
   background:$very-dark;

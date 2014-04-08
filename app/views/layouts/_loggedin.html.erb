@@ -1,4 +1,12 @@
-
+<% if current_page?(root_path) %>
+	<%= link_to image_tag("henballoons.jpg", :alt => "Hen party balloons", :class => "dash-img"), root_path %>
+<% end %>
+<% if current_page?(my_events_path) %>
+	<%= link_to image_tag("henballoons.jpg", :alt => "Hen party balloons", :class => "dash-img"), root_path %>
+<% end %>
+<% if current_page?(messages_path) %>
+	<%= link_to image_tag("henballoons.jpg", :alt => "Hen party balloons", :class => "dash-img"), root_path %>
+<% end %>
 
 <header>
 	<div class="container">
