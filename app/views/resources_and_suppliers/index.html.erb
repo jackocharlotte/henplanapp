@@ -7,6 +7,7 @@
 	              <div class="row">
 	                  <div class="col-xs-12 col-sm-12 col-md-12">
 	                     <h1><span class="icon-font">&#128278;</span>Resources and Suppliers</h1>
+	                     <a href="" class="btn btn-primary" style="float:right; margin-top:-35px;">My bookmarks</a>
 	                  </div> 
 	              </div>
 	          </div>
@@ -21,23 +22,24 @@
         <article role="main">
 
         	<div class="col-xs-12 col-sm-12 col-md-12">
-             	<h3>Find everything you need to make your hen party extra special. From here you can access games templates, food and drinks recipes and recommended purchases. You can also bookmark items and come back to them later.</h3>
+             	<h3>Find everything you need to make your hen party extra special. Here you can access games templates, food and drinks recipes and recommended purchases. You can also bookmark items and come back to them later.</h3>
            </div>  
 
 			<div class="col-xs-12 col-sm-4 col-md-4">
-				<%= link_to image_tag("http://lorempixel.com/g/400/200", :alt => "10 best Cocktail recipes", size: "200"), root_path %>
-				<h2>Recipes</h2>
-				<p> Labore, incidunt, magnam harum ipsum iste perferendis animi qui illo perspiciatis laborum odio dolorum id obcaecati reiciendis expedita inventore officiis itaque sed beatae fugiat nesciunt eius assumenda autem. Aut, suscipit maiores molestias ducimus deserunt sunt debitis voluptatum modi tempora ipsum. Odit molestias iure similique laudantium eos non sunt vel distinctio debitis id. Facilis quia eaque aut.</p>
+				<%= link_to image_tag("cocktails.jpg", :alt => "Cocktails", :class => "header-img"), root_path %>
+				<h2><%= link_to "Food and drink recipes", root_path %></h2>
+				<p>Prepare your own food and drinks with fun twists or classic mixtures.</p>
+				<p class="att">The above image is available on CC license. By Karen - <a target="blank" href="https://flic.kr/p/5atRuu">https://flic.kr/p/5atRuu</a>
 			</div>
 			<div class="col-xs-12 col-sm-4 col-md-4">
 				<%= link_to image_tag("http://lorempixel.com/g/400/200", :alt => "Mr & Mrs Game template", size: "200"), root_path %>
-				<h2>Mr &amp; Mrs Game template</h2>
-				<p> Labore, incidunt, magnam harum ipsum iste perferendis animi qui illo perspiciatis laborum odio dolorum id obcaecati reiciendis expedita inventore officiis itaque sed beatae fugiat nesciunt eius assumenda autem. Aut, suscipit maiores molestias ducimus deserunt sunt debitis voluptatum modi tempora ipsum. Odit molestias iure similique laudantium eos non sunt vel distinctio debitis id. Facilis quia eaque aut.</p>
+				<h2><%= link_to "Games templates", root_path %></h2>
+				<p>Personalise and print some games templates to bring everyone together.</p>
 			</div>
 			<div class="col-xs-12 col-sm-4 col-md-4">
 				<%= link_to image_tag("http://lorempixel.com/g/400/200", :alt => "Shopping", size: "200"), root_path %>
-				<h2>10 best Cocktail recipes</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, dolorem, velit deserunt asperiores quibusdam perspiciatis molestiae quas eaque nihil consequuntur tempore veniam cumque officia. Culpa, magnam, incidunt, dolorem ratione ipsa temporibus molestias explicabo labore quidem necessitatibus aspernatur autem quae nobis obcaecati dicta qui quod.</p>
+				<h2><%= link_to "What to buy", root_path %></h2>
+				<p>A house needs decorations, a hen needs accessories and the party needs a theme. Here's a list of what to buy and where to get it.</p>
 			</div>
 
         </article>

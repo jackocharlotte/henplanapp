@@ -12,6 +12,14 @@ $pink-dark: #a63c5f;
 $very-dark: #3a2d31;
 $purple: #7f5060;
 
+/*mixin*/
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
 body{ 
   font: {
     family: 'Museo Sans', Helvetica, Arial, sans-serif;
@@ -162,7 +170,7 @@ a.sub-menu, .sub-menu a {
   word-wrap:break-word;
 }
 
-/*Submit buttons
+/*Submit buttons*/
 input[type="submit"], .login_btn {
   background-color: $pink;
   border:none;
@@ -171,15 +179,13 @@ input[type="submit"], .login_btn {
   padding:5px 15px;
   text-decoration: none;
   cursor: pointer;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+  
   margin:10px 0;
 }
 .btn.login {
   float:right;
   margin-top:7px;
-}*/
+}
 
 .no-items {
   clear:both;
@@ -199,7 +205,7 @@ textarea {height:300px;}
 
 article {margin-bottom:30px;}
 
-
+.att {font-size: 12px;}
 
 /*Scaffold*/
 pre {
