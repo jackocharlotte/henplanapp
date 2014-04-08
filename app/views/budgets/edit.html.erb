@@ -1,6 +1,17 @@
-<h1>Editing budget</h1>
+<% provide(:title, 'Editing Budget Item') %>
 
-<%= render 'form' %>
+<div class="container">
+    <div class="row tasks">
+        <article role="main">
+			<div class="panel padded col-md-10">
 
-<%= link_to 'Show', @budget %> |
-<%= link_to 'Back', budgets_path %>
+				<h1>Editing <%= @budget.name %></h1>
+
+				<%= render 'form' %>
+
+				<%= link_to budgets_path, class: 'icon-font' do %> &#59229; <span>Back to Budgets</span><% end %>
+
+			</div>
+     	</div>
+  	</article>
+</div>
