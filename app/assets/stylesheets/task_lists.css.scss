@@ -11,35 +11,21 @@ body.task_lists-index, body.task_lists-new, body.task_lists-edit {
   background: url(image_path('light_grey.png')) repeat; 
 }
 
-body.task_lists-new, body.attendees-new, body.task_lists-edit, body.attendees-edit, body.task_items-edit, body.task_items-new, body.notes-new, body.notes-edit, body.budgets-edit  {
-  .padded {
-    margin-top:20px;
-  }
-  label {margin-top:10px;}
-}
-
 .tasklists-layout {margin-left: -12px;}
 
-.activity {
-  img {
-    margin-right:10px;
-    float:left;
-  }
-  h4 {color:$purple; font-weight: 700;}
-  span {
-    color:$purple;
-    font-size: 14px;
-  }
-}
 .tasks {
-  margin: 1em 0 1em 0;
+  margin-top: 1em;
   input[type=text], textarea {
     width:100%;
     padding:10px;
+    
   }
   .padded {
     word-wrap:break-word;
     border:none;
+    label {margin-top:7px;}
+    h1 {margin-top:0;}
+    h2 {color:$very-dark;}
   }
   .border { border: 1px solid #d1b8c0;}
   .activity { 
@@ -56,16 +42,3 @@ body.task_lists-new, body.attendees-new, body.task_lists-edit, body.attendees-ed
     color:$purple;
   }
 }
-
-/*.new {
-  padding-top:40px;
-  @media (max-width: 767px) {
-        padding-top:10px;
-  }
-  a {
-    float:right;
-    @media (max-width: 767px) {
-        float:left;
-    }
-  }
-}*/
