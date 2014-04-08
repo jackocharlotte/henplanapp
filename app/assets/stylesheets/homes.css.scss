@@ -56,7 +56,8 @@ body.homes-index {
   padding-bottom:30px; 
   .row {margin-top:15px;}
 }
-.nav-tabs {margin-top:15px;}
+
+.nav-tabs {margin-top:45px;}
 
 .event_details {
   float:left;
@@ -121,6 +122,11 @@ body.homes-index {
   border: 1px solid #eee;
   border-radius: 4px;
   font-weight: 300;
+}
+
+.dash-img {
+  position: fixed;
+  z-index: -1;
 }
 
 .sessions-new, .registrations-new, .passwords-new, .registrations-edit, .create_event-index {

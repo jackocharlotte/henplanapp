@@ -1,5 +1,8 @@
 HenplanppV1::Application.routes.draw do
 
+  get "resources_and_suppliers/index"
+  get 'resources', to: 'resources_and_suppliers#index'
+  
   resources :budgets
 
   get "messages/index"
