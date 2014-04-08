@@ -37,7 +37,7 @@
                 <% @task_lists.each do |task_list| %>
                 
                     <div class="tasks col-xs-12 col-sm-6" id="<%= dom_id(task_list) %>">
-                        <div class="panel padded">
+                        <div class="panel padded border">
                            <h2><%= task_list.title %></h2>
                            
                            <p class="created">Assigned to: <%= User.find(task_list.user_id).username %> <br/> Created: <%= task_list.created_at.strftime("%d %b. %Y") %></p>
@@ -81,42 +81,43 @@
 
 
           <!-- Static content for prototype to demonstrate the display of entire notes-->
-          <div class="tasks col-xs-12 col-sm-12 col-md-4">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <p class="panel-title head"><span class="icon-font">&#10078;</span>Activity </p>
-          </div>
-          <div class="panel-body">
-                  <ul class="media-list">
-            <li class="media">
-              <a class="pull-left" href="#">
-                <%=  image_tag("members/m3.jpg", :alt => "member", size: "60") %>
-              </a>
-              <div class="media-body">
-                <p><a href="">Lottejackson</a> added 5 tasks to the <a href="">Music</a> task list. <br/><span class="date-small">2 hours ago. </span> </p>
-              </div>
-            </li>
-             <li class="media">
-              <a class="pull-left" href="#">
-                <%=  image_tag("members/m1.jpg", :alt => "member", size: "60") %>
-              </a>
-              <div class="media-body">
-                <p><a href="">Kirsten</a> added 2 items to the <a href="">Budget</a> list.<br/> <span class="date-small">2 hours ago. </span> </p>
-              </div>
-            </li>
-             <li class="media">
-              <a class="pull-left" href="#">
-                <%=  image_tag("members/m1.jpg", :alt => "member", size: "60") %>
-              </a>
-              <div class="media-body">
-                <p><a href="">Kirsten</a> completed 2 items on the <a href="">Initial jobs</a> task list.<br/> <span class="date-small">2 hours ago. </span> </p>
-              </div>
-            </li>
+        <div class="tasks col-xs-12 col-sm-12 col-md-4">
+            <div class="panel panel-default activity">
+                <div class="panel-heading">
+                  <p class="panel-title head"><span class="icon-font">&#10078;</span>Activity </p>
+                </div>
+                <div class="panel-body">
+                    <ul class="media-list">
+                        <li class="media">
+                            <a class="pull-left" href="#">
+                              <%=  image_tag("members/m3.jpg", :alt => "member", size: "60") %>
+                            </a>
+                            <div class="media-body">
+                              <p><a href="">Lottejackson</a> added 5 tasks to the <a href="">Music</a> task list. <br/><span class="date-small">2 hours ago. </span> </p>
+                            </div>
+                        </li>
 
-          </ul>
-          </div>
-        </div>
-      </div>
+                         <li class="media">
+                            <a class="pull-left" href="#">
+                              <%=  image_tag("members/m1.jpg", :alt => "member", size: "60") %>
+                            </a>
+                            <div class="media-body">
+                              <p><a href="">Kirsten</a> added 2 items to the <a href="">Budget</a> list.<br/> <span class="date-small">2 hours ago. </span> </p>
+                            </div>
+                         </li>
+
+                         <li class="media">
+                            <a class="pull-left" href="#">
+                              <%=  image_tag("members/m1.jpg", :alt => "member", size: "60") %>
+                            </a>
+                            <div class="media-body">
+                              <p><a href="">Kirsten</a> completed 2 items on the <a href="">Initial jobs</a> task list.<br/> <span class="date-small">2 hours ago. </span> </p>
+                            </div>
+                        </li>
+                    </ul>
+                 </div><!--panel body-->
+              </div><!--panel-->
+         </div><!--col-->
               
         </article>
     </div>
