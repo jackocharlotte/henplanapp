@@ -7,7 +7,6 @@
               <div class="row">
                   <div class="col-xs-12 col-sm-12 col-md-12">
                      <h1><span class="icon-font">&#10003;</span>Task Lists</h1>
-                       
                   </div> 
               </div>
           </div>
@@ -19,16 +18,19 @@
     <div class="row">
         <article role="main">  
 
-           <div class="col-md-12 ">
+           <div class="col-md-12 links">
+             <%= link_to new_task_list_path, class: 'icon-font btn btn-primary' do %> <span>New Task List</span><% end %>
               <div class="dropdown">
                   <a class="filter" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html">
                     All Task Lists <span class="caret"></span>        
                   </a>
-                  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                  <ul class="dropdown-menu left" role="menu" aria-labelledby="dLabel">
                     <li><a href="">My Task Lists</a></li>
                   </ul>
               </div>
-              <%= link_to new_task_list_path, class: 'icon-font sub-menu' do %> &#8862; <span>New Task List</span><% end %>
+              <%= link_to root_path, class: 'icon-font back' do %> &#59229; <span>Back to Dashboard</span>
+              <% end %>
+             
           </div>
             
           <div class="col-xs-12 col-sm-12 col-md-8 tasklists-layout">
