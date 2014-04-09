@@ -19,18 +19,20 @@
     <div class="row">
         <article role="main">  
           
-           <div class="col-md-12 ">
+           <div class="col-md-12 links">
+             <%= link_to new_note_path, class: 'icon-font btn btn-primary' do %> <span>New Note</span><% end %>
               <div class="dropdown">
-                <a class="filter" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html">
-                  All Notes <span class="caret"></span>        
-                </a>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                  <li><a href="">My Notes</a></li>
-                </ul>
+                  <a class="filter" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html">
+                    All Notes <span class="caret"></span>        
+                  </a>
+                  <ul class="dropdown-menu left" role="menu" aria-labelledby="dLabel">
+                    <li><a href="">My Notes</a></li>
+                  </ul>
               </div>
-
-              <%= link_to new_note_path, class: 'icon-font sub-menu' do %> &#8862; <span>New Note</span><% end %>
-            </div>
+              <%= link_to root_path, class: 'icon-font back' do %> &#59229; <span>Back to Dashboard</span>
+              <% end %>
+             
+          </div>
             
             <!--Static demo content for prototype-->
             <div class="col-xs-12 col-sm-6 col-md-6">
