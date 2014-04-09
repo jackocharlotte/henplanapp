@@ -17,13 +17,17 @@
 		<%= render 'layouts/not_loggedin' %>
 	<% end %>
 
-<div class="flash-container"></div>
+<!--<div class="flash-container"></div>-->
 
-<% flash.each do |type, message| %>
-	<div class="alert flash <%= type %>">
+
+  <% flash.each do |type, message| %>
+	<div class="alert flash <%= type %> alert-success alert-dismissable">
 		<%= message %>
+		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 	</div>
 <% end %>	
+
+
 
 <%= yield %>
 

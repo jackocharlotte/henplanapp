@@ -3,4 +3,12 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 
-$('.dropdown-toggle').dropdown()
+
+
+window.setTimeout (->
+  $(".alert").fadeTo(500, 0).slideUp 500, ->
+    $(this).remove()
+    return
+
+  return
+), 2000
