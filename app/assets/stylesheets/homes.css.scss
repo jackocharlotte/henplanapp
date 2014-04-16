@@ -70,6 +70,12 @@ body.homes-index {
 .nav-tabs {
   margin-top:70px;
   a {background: #fff;}
+  li a {
+  @media (max-width: 480px) {
+      margin-right:0;
+      font-size: 12px;
+    } 
+  }
 }
 
 .event_details {
@@ -79,11 +85,17 @@ body.homes-index {
   .date {
     font-weight: 700;
     font-size: 55px;
-    line-height: 49px;         
+    line-height: 49px; 
+    @media (max-width: 480px) {
+      font-size: 38px;
+    }        
   }
   span.month {
     font-size: 29px;
     line-height: 45px; 
+    @media (max-width: 480px) {
+      font-size: 19px;
+    }
   }
   .address {font-size: 16px;}
   .countdown {
