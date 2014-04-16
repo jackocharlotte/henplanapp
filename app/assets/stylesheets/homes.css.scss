@@ -46,7 +46,7 @@ body.homes-index {
         padding: 24px;
         font-size: 25px;
         @media (max-width: 480px) {
-          width:70px;
+          width:73px;
         }
       }
       
@@ -54,6 +54,10 @@ body.homes-index {
     .view  {
       float:right; 
       padding-right:10px;
+      @media (max-width: 480px) {
+       font-size: 12px;
+       margin-right: 0;
+      }
     }
 }
 .dash-img {
@@ -142,7 +146,7 @@ body.homes-index {
     font-size: 18px;
     margin-top:-5px;
   }
-  button { font-size: 16px; margin:0 10px;}
+  button { font-size: 13px; margin:0px;}
 }
 .media-list li {
   padding-bottom: 10px;
