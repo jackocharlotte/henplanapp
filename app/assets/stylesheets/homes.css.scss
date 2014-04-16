@@ -96,6 +96,7 @@ body.homes-index {
     line-height: 45px; 
     @media (max-width: 480px) {
       font-size: 25px;
+      line-height: 35px;
     }
   }
   .address {font-size: 16px;}
@@ -109,7 +110,13 @@ body.homes-index {
     bottom:30px;
     right:30px;
   }
-  .email {top:70px;}
+  .email {
+    top:70px;
+    @media (max-width: 480px) {
+      word-wrap: break-word;
+      width: 78px;
+    }
+  }
 }
 .total {
   text-align: center;
