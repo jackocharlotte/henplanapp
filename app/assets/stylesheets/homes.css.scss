@@ -18,6 +18,7 @@ $purple: #7f5060;
 
 body.homes-index {
     h3 {color:$very-dark;}
+
     
     .padded, .panel {
       overflow:hidden; 
@@ -25,6 +26,7 @@ body.homes-index {
       margin-bottom:15px;
       .head {
         color:$purple;
+        font-weight:700;
       }
       .icon-font {margin-right:5px;}
       span.caption {
