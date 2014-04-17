@@ -55,7 +55,11 @@ body.homes-index {
            height:45px;
            padding: 5px;
          }
-
+        @media (max-width: 480px) {
+          width:40px;
+          height:40px;
+          font-size: 18px;
+        }
       }
       img {
         @media (max-width: 1200px) {
@@ -65,8 +69,12 @@ body.homes-index {
          @media (max-width: 991px) {
            width:45px;
            height:45px;
-         }        
-        }
+         } 
+         @media (max-width: 480px) {
+          width:40px;
+          height:40px;
+        }       
+      }
     }
     .view  {
       float:right; 
