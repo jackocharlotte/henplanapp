@@ -14,9 +14,11 @@ $very-dark: #3a2d31;
 		font-size:14px;
 		float:right;
 		margin-right:10px;
-		@media (max-width: 991px) {
+		@media (max-width: 480px) {
            font-size:12px;
-           margin-right:5px;
+           margin-top:10px;
+           float:none;
+           text-align: left;
          }
 	}
 	.well-lg:hover {
