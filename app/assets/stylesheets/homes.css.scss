@@ -46,10 +46,29 @@ body.homes-index {
         padding: 24px;
         font-size: 25px;
         @media (max-width: 480px) {
-          width:75px;
+          width:77px;
         }
+        @media (max-width: 1200px) {
+          width:65px;
+          height:65px;
+          padding: 12px;
+        }
+        @media (max-width: 991px) {
+           width:45px;
+           height:45px;
+           padding: 5px;
+         }
       }
-      
+      img {
+        @media (max-width: 1200px) {
+           width:65px;
+           height:65px;
+         } 
+         @media (max-width: 991px) {
+           width:45px;
+           height:45px;
+         }        
+        }
     }
     .view  {
       float:right; 
@@ -97,7 +116,10 @@ body.homes-index {
     line-height: 49px; 
     @media (max-width: 480px) {
       font-size: 28px;
-    }        
+    }   
+    @media (max-width: 1200px) {
+       font-size: 35px;
+     }     
   }
   span.month {
     font-size: 29px;
