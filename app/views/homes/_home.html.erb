@@ -1,13 +1,105 @@
 <% provide(:title, 'Plan the perfect Hen Party, together.') %>
 
+
 <div class="container">
     <div class="row">
-        <article role="main">
-          	<div class="col-md-12">
-				<h1>Plan the perfect hen party, together.</h1>
-				<p>Landing page for website</p>
-
+    	<article>
+    		<div class="col-xs-12 col-sm-12 col-md-12 home">
+    			<h1>Plan the perfect hen party, with friends.</h1>    			
+    		</div>
+    		<div class="col-xs-12 col-sm-4 col-md-4">
+    			<%= image_tag("cocktail-l-plate.png", alt: "cocktail glass and l plate", class: "cocktail") %>
+    			<h2 class="home-sub">The tool that makes group hen party planning easy and fun. </h2>
+    			<%= link_to "Sign up", register_path, class: "btn btn-primary home" %>
 			</div>
-		</article>
-    </div>
+    		
+			<div class="col-xs-12 col-sm-8 col-md-8">
+
+	    		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				  <!-- Indicators -->
+				  <ol class="carousel-indicators">
+				    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+				  </ol>
+
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner">
+					    <div class="item active">
+					      <%= image_tag("shots/dashboard-shot.png") %>
+					    </div>
+
+					    <div class="item">
+					      <%= image_tag("shots/attendee-shot.png") %>
+					    </div>
+
+					    <div class="item">
+					      <%= image_tag("shots/messages-shot.png") %>
+					    </div>
+
+					    <div class="item">
+					      <%= image_tag("shots/notes-shot.png") %>
+					   	</div>
+
+					   	<div class="item">
+					      <%= image_tag("shots/resources-shot.png") %>
+					   	</div>
+
+					</div><!-- carousel inner -->
+
+				  <!-- Controls -->
+				  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+				    <span class="icon-font">&#59229;</span>
+				  </a>
+				  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+				    <span class="icon-font">&#59230;</span>
+				  </a>
+			</div>
+	   	</article>
+	</div>
 </div>
+
+
+<div class="wrapper">
+	<div class="container">
+	    <div class="row">
+	    	<article>
+	    		<div class="col-xs-12 col-sm-4 col-md-4 home-features">
+	    			<div class="padded">
+						<span class="icon-font">&#10003;</span>
+		    			<h3>Organise</h3>
+		    			<p>Create task lists, attendee lists and budget lists to keep on top of every detail.</p>
+	    			</div>
+				</div>
+
+				<div class="col-xs-12 col-sm-4 col-md-4 home-features">
+					<div class="padded">
+						<span class="icon-font">&#128101;</span>
+		    			<h3>Collaborate</h3>
+		    			<p>Add multiple event administrators, send messages and assign tasks to different users.</p>
+	    			</div>
+				</div>
+
+				<div class="col-xs-12 col-sm-4 col-md-4 home-features">
+					<div class="padded">
+					<span class="icon-font">&#59290;</span>
+		    			<h3>Personalise</h3>
+		    			<p>Bookmark recipes, recommended purchases and create personalised templates to make your hen party special. </p>
+	    			</div>
+				</div>
+
+		   	</article>
+		</div>
+	</div>
+</div>
+
+<footer>
+<div class="container">
+    <div class="row">
+    	<article>
+			<p>&copy; Copyright 2015 Charlotte Jackson <a target="blank" href="http://www.lottejackson.com">www.lottejackson.com</a>
+	   	</article>
+	</div>
+</div>
+</footer>

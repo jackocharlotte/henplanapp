@@ -12,3 +12,7 @@ window.setTimeout (->
 
   return
 ), 2000
+
+$('.carousel').carousel({
+  interval: 2000
+})
