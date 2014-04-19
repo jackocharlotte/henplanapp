@@ -36,17 +36,27 @@ a.carousel-control {
     font-size: 40px;
     color:$very-dark;
   }
+  @media (max-width: 480px) {
+    font-size: 30px;
+  }
 }
 .cocktail {
   position: absolute;
   margin-top: 148px;
   z-index: -1;
+  @media (max-width: 480px) {
+    display:none;
+  }
 }
 .home-sub {
   font-weight: 300;
   line-height: 35px;
   margin-bottom:20px;
   font-size: 24px;
+  @media (max-width: 480px) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 .btn-primary.home {
   width:40%;
