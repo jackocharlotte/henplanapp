@@ -24,6 +24,9 @@ $purple: #7f5060;
     font-weight: 300;
     color:$very-dark;
     font-size: 45px;
+    @media (max-width: 480px) {
+      font-size: 35px;
+    }
   } 
 }
 a.carousel-control {
@@ -49,6 +52,9 @@ a.carousel-control {
   width:40%;
   font-weight: 700;
   font-size: 20px;
+  @media (max-width: 480px) {
+    margin-bottom:20px;
+  }
 }
 .home-features {
   span {font-size: 40px;}
@@ -67,12 +73,11 @@ footer {
   padding:30px 0 0 0;
 }
 
-
+/* Dashboard */
 
 body.homes-index {
     h3 {color:$very-dark;}
 
-    
     .padded, .panel {
       overflow:hidden; 
       margin-top:10px; 
@@ -275,6 +280,9 @@ body.homes-index {
       padding:8px;
       margin-top:10px;
       color:#fff;
+      &:hover {
+        background-color:$purple;
+      }
     }
     input[type="checkbox"] {
       width:20px;
