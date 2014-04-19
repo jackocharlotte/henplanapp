@@ -36,6 +36,12 @@ p, ol, ul, td {
   line-height: 1.5;
 }
 
+.container {
+  @media (max-width: 480px) {
+    padding:0 20px;
+  }
+}
+
 h1,
 .h1 {
   font-size: 34px;
