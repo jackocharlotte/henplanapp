@@ -85,7 +85,8 @@ body.homes-index {
       .head {
         color:$purple;
         font-weight:700;
-        font-size: 17px;
+        font-family: helvetica, verdana, arial, sans-serif;
+        font-size: 16px;
       }
       .icon-font {margin-right:5px;}
       span.caption {
@@ -161,6 +162,7 @@ body.homes-index {
 
 .nav-tabs {
   margin-top:70px;
+  font-family: helvetica, verdana, arial, sans-serif;
   a {background: #fff;}
   li a {
   @media (max-width: 480px) {
