@@ -20,10 +20,10 @@ body{
   -webkit-font-smoothing: antialiased;
 }
 
-p, ul, ol, td {
-  /*font-family: verdana, arial, helvetica, sans-serif;*/
+/*ol, td {
+  font-family: verdana, arial, helvetica, sans-serif;
   line-height: 1.5;
-}
+}*/
 
 .container {
   @media (max-width: 480px) {
@@ -60,7 +60,7 @@ header{
     display: block;
     float: left;
     color:#fff;
-      @media (max-width: 480px) {
+    @media (max-width: 480px) {
       margin-top:0;
     }
   }
@@ -71,7 +71,7 @@ header{
 }
 
 .lw-header {
-  padding:25px 0 0 0;
+  padding:25px 0;
   border-bottom: 1px solid #d1b8c0;
   h1 {margin:0;}
   background:#fff;
@@ -82,6 +82,9 @@ body.messages-index, body.homes-index, body.my_events-index {
     border:none;
     h1 {color:#fff;}
     background:none!important;
+    @media (max-width: 480px) {
+       padding:25px 0 0 0;
+    }
   }
 }
 
