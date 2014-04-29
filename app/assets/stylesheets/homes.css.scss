@@ -166,10 +166,11 @@ body.homes-index {
   margin-top:70px;
   font-family: helvetica, verdana, arial, sans-serif;
   a {background: #fff;}
+  font-size:16px;
   li a {
   @media (max-width: 480px) {
-      margin-right:0;
-      font-size: 12px;
+      margin-right:1;
+      font-size: 13px;
       padding:10px 5px;
     } 
   }
