@@ -2,19 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-/*variable*/
-$pink: #fd75a2;
-$pink-dark: #a63c5f;
-$very-dark: #3a2d31;
-$purple: #7f5060;
+@import 'sass';
 
-/*mixin*/
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-     -moz-border-radius: $radius;
-      -ms-border-radius: $radius;
-          border-radius: $radius;
-}
+
 
 /* Landing home page*/
 .home {
@@ -95,11 +85,12 @@ body.homes-index {
       .head {
         color:$purple;
         font-weight:700;
+        font-size: 17px;
       }
       .icon-font {margin-right:5px;}
       span.caption {
         text-align: center; 
-        font-size: 12px; 
+        font-size: 16px; 
         font-weight: 300;
         margin:0 0 14px -5px; 
         display: block;
@@ -186,7 +177,7 @@ body.homes-index {
   margin-right: 3%;
   .date {
     font-weight: 700;
-    font-size: 55px;
+    font-size: 57px;
     line-height: 49px; 
     @media (max-width: 1200px) {
        font-size: 35px;
@@ -197,9 +188,9 @@ body.homes-index {
   }
   span.month {
     font-size: 29px;
-    line-height: 45px; 
+    line-height: 47px; 
     @media (max-width: 480px) {
-      font-size: 25px;
+      font-size: 20px;
       line-height: 35px;
     }
   }
@@ -233,7 +224,7 @@ body.homes-index {
 }
 .budgets {text-align: center;}
 .bg-info,  .bg-warning {
-  padding:10px;
+  padding:11px;
   font-size: 14px;
   span {
     float:right;
@@ -252,18 +243,6 @@ body.homes-index {
 }
 
 .new-event {float:right;}
-
-
-.instructions {
-  padding: 9px 14px;
-  margin-bottom: 14px;
-  background-color: #fff;
-  border: 1px solid #eee;
-  border-radius: 4px;
-  font-weight: 300;
-}
-
-
 
 .sessions-new, .registrations-new, .passwords-new, .registrations-edit, .create_event-index {
   background:$very-dark;

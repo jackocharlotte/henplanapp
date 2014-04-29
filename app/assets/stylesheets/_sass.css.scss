@@ -1,0 +1,13 @@
+/*variable*/
+$pink: #fd75a2;
+$pink-dark: #a63c5f;
+$very-dark: #3a2d31;
+$purple: #7f5060;
+
+/*mixin*/
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}

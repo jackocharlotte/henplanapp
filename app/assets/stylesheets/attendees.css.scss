@@ -2,13 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$pink: #fd75a2;
-$pink-dark: #a63c5f;
-$very-dark: #3a2d31;
-$purple: #7f5060;
+@import 'sass';
 
 .sums {
-	border-top:3px solid $very-dark;
+	border-top:2px solid $very-dark;
 	margin-top:20px;
 	color:#fff;
 	

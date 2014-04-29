@@ -7,18 +7,7 @@
         url(font-path('webfonts/entypo.svg#entypo')) format('svg');
 }
 
-$pink: #fd75a2;
-$pink-dark: #a63c5f;
-$very-dark: #3a2d31;
-$purple: #7f5060;
-
-/*mixin*/
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-     -moz-border-radius: $radius;
-      -ms-border-radius: $radius;
-          border-radius: $radius;
-}
+@import 'sass';
 
 body{ 
   font: {
@@ -27,11 +16,11 @@ body{
     size:15px;
   }
   color: #3a2d31;  
-  background:#fbf6f6; /*f0e5e8*/
+  background:#fbf6f6; 
   -webkit-font-smoothing: antialiased;
 }
 
-p, ol, ul, td {
+ol, td {
   font-family: verdana, arial, helvetica, sans-serif;
   line-height: 1.5;
 }
@@ -120,22 +109,7 @@ nav{
       font-size: 16px;
     }
   }
-  /*li {
-    display:block;
-    float:left;
-    margin-left:5px;
-  }
-  a.login_btn { 
-    color:#fff;
-    float:right;
-    text-align: center; 
-    background-color:$pink;
-  }
-  ul.loggedin {
-    margin-top:0px;
-    float: right;
-    padding:0;
-  }*/
+
   .btn-group {
     float:right;
     .icon-font { margin-right:5px; }
@@ -224,7 +198,7 @@ article {margin-bottom:30px;}
 .att {font-size: 12px;}
 
 /*Scaffold*/
-pre {
+/*pre {
   background-color: #eee;
   padding: 10px;
   font-size: 11px;
@@ -236,7 +210,7 @@ div {
 }
 #notice {
   color: green;
-}
+}*/
 .field_with_errors {
   padding: 3px;
   background-color:#ebccd1;
