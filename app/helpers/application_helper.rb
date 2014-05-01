@@ -4,6 +4,7 @@ module ApplicationHelper
  	end
 
 	# Returns the full title of each page.
+	# From tutorial: Chapter 4 Rails-flavored Ruby - http://ruby.railstutorial.org/chapters/rails-flavored-ruby#top
 	def full_title(page_title)
 		main_title = "Henplan app"
 		if page_title.empty?
@@ -11,11 +12,6 @@ module ApplicationHelper
 		else
 		  "#{main_title} | #{page_title}"
 		end
-	end
-
-	def typekit_include_tag apikey
-	  javascript_include_tag("//use.typekit.com/#{bqh8lwi}.js") +
-	  javascript_tag("try{Typekit.load()}catch(e){}")
 	end
 	
 end

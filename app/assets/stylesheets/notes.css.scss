@@ -4,6 +4,8 @@
 
 @import 'sass';
 
+/*Free background - source: http://elemisfreebies.com/10/21/9-tileable-notepad-patterns/*/
+
 body.notes-index, body.notes-new, body.notes-edit {
 	background: url(image_path('lines.jpg')) repeat; 
 }

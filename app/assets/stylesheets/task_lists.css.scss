@@ -4,6 +4,8 @@
 
 @import 'sass';
 
+/*Free background - source: http://subtlepatterns.com/light-fray/ */
+
 body.task_lists-index, body.task_lists-new, body.task_lists-edit {
   background: url(image_path('light_grey.png')) repeat; 
 }
