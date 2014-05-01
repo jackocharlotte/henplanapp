@@ -14,7 +14,7 @@ module ApplicationHelper
 	end
 
 	def typekit_include_tag apikey
-	  javascript_include_tag("//use.typekit.com/#{apikey}.js") +
+	  javascript_include_tag("//use.typekit.com/#{bqh8lwi}.js") +
 	  javascript_tag("try{Typekit.load()}catch(e){}")
 	end
 	
