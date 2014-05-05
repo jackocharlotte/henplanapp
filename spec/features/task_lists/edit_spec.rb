@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe "Editing task lists" do
-  let!(:task_list) { TaskList.create(title: "Groceries", description: "Grocery list.") }
+  let!(:task_list) { TaskList.create(title: "Activities", description: "Activity checklist.") }
 
   def update_task_list(options={})
     options[:title] ||= "My task list"
