@@ -1,3 +1,6 @@
+#Followed Treehouse tutorial - Writing our first tests http://teamtreehouse.com/library/build-a-todo-list-application-with-rails-4/build-a-todo-list-application-with-rails-4/write-our-first-tests
+
+
 require 'spec_helper'
 
 describe "Deleting task lists" do
