@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe "Deleting task lists" do
-  let!(:task_list) { TaskList.create(title: "Activity", description: "Activity checklist.") }
+  let!(:task_list) { TaskList.create(title: "Groceries", description: "Grocery list.") }
 
   it "is successful when clicking the destroy link" do
     visit "/task_lists"
