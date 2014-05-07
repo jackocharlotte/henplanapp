@@ -4414,7 +4414,7 @@ a.thumbnail.active {
   color: #333;
 }
 .alert {
-  padding: 15px 0 15px 70px;
+  padding: 15px 0 15px 15px;
   border: 1px solid transparent;
   border-radius: 4px;
 }
@@ -4433,7 +4433,7 @@ a.thumbnail.active {
   margin-top: 5px;
 }
 .alert-dismissable {
-  padding-right: 140px;
+  padding-right: 15px;
 }
 .alert-dismissable .close {
   position: relative;
